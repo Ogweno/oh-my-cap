@@ -1,280 +1,195 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Oh My CAP</title>
+
+    
+    <link rel="dns-prefetch" href="https://maxcdn.bootstrapcdn.com/" />
+    <link rel="preconnect" href="https://maxcdn.bootstrapcdn.com/" />
+    <link rel="dns-prefetch" href="https://unpkg.com/" />
+    <link rel="preconnect" href="https://unpkg.com/" />
+    
+    <link rel="prefetch" href="https://unpkg.com/lunr/lunr.js" />
+    <link rel="prefetch" href="http://oh-my-cap.wangliang.one/js/search.min.js" />
+    <link rel="prefetch" href="http://oh-my-cap.wangliang.one/index.json" />
+    <meta name="generator" content="Hugo 0.25.1" /><link rel="alternate" type="application/rss+xml" title="Oh My CAP Feed" href="http://oh-my-cap.wangliang.one/index.xml"><link rel="canonical" href="http://oh-my-cap.wangliang.one/">
+
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="prefetch stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+
+    
+    <link rel="prefetch stylesheet" type="text/css" href="http://oh-my-cap.wangliang.one/styles.css">
+
+    <script>var _paq = undefined;</script></head>
+  <body itemscope itemtype="http://schema.org/WebPage">
+    <div id="site-container">
+      <div id="site-header">
+        <header class="small-text-center medium-text-left">
+          <a href="http://oh-my-cap.wangliang.one">
+            <span id="site-title" itemprop="name">Oh My CAP</span>
+            <br/><span id="site-tagline">世间最庄严的问题是：我能做什么好事？</span>
+          </a>
+        </header>
+        <label for="menu-toggle-box"><div id="menu-toggle" class="main-nav no-select"><span><span class="fa fa-bars"></span> MENU</span></div></label>
+        <input type="checkbox" id="menu-toggle-box" class="hide"/>
+        <nav id="main-nav">
+          <ul class="menu"><li class="no-select" itemscope itemtype="http://schema.org/SiteNavigationElement">
+    <input type="checkbox" id="nav-%E5%8D%9A%E5%AE%A2" class="hide"/>
+    <a class="main-nav button" tabindex="0" href="http://oh-my-cap.wangliang.one/post/" >
+      <span>博客</span><label for="nav-%E5%8D%9A%E5%AE%A2">
+        &nbsp;&nbsp;<span class="nav-arrow">&#9656;</span>
+      </label></a><ul>
+    <li class="no-select" itemscope itemtype="http://schema.org/SiteNavigationElement">
+    <input type="checkbox" id="nav-%E9%A1%B9%E7%9B%AE%E7%BD%91%E7%AB%99%E5%85%A8%E9%9D%A2%E6%94%B9%E7%89%88" class="hide"/>
+    <a class="main-nav button" tabindex="0" href="http://oh-my-cap.wangliang.one/post/new-website/" >
+      <span>项目网站全面改版</span></a></li>
+    </ul></li><li class="no-select" itemscope itemtype="http://schema.org/SiteNavigationElement">
+    <input type="checkbox" id="nav-%E6%96%B0%E6%89%8B%E5%85%A5%E9%97%A8" class="hide"/>
+    <a class="main-nav button" tabindex="0" href="http://oh-my-cap.wangliang.one/about/" >
+      <span>新手入门</span></a></li><li class="no-select" itemscope itemtype="http://schema.org/SiteNavigationElement">
+    <input type="checkbox" id="nav-%E5%AE%89%E8%A3%85" class="hide"/>
+    <a class="main-nav button" tabindex="0" href="http://oh-my-cap.wangliang.one/install/" >
+      <span>安装</span></a></li><li class="no-select" itemscope itemtype="http://schema.org/SiteNavigationElement">
+    <input type="checkbox" id="nav-%E5%BF%AB%E9%80%9F%E5%BC%80%E5%A7%8B" class="hide"/>
+    <a class="main-nav button" tabindex="0" href="http://oh-my-cap.wangliang.one/quick-start/" >
+      <span>快速开始</span></a></li><li class="no-select" itemscope itemtype="http://schema.org/SiteNavigationElement">
+    <input type="checkbox" id="nav-%E6%B5%81%E7%A8%8B" class="hide"/>
+    <a class="main-nav button" tabindex="0" href="http://oh-my-cap.wangliang.one/procedures/" >
+      <span>流程</span><label for="nav-%E6%B5%81%E7%A8%8B">
+        &nbsp;&nbsp;<span class="nav-arrow">&#9656;</span>
+      </label></a><ul>
+    <li class="no-select" itemscope itemtype="http://schema.org/SiteNavigationElement">
+    <input type="checkbox" id="nav-%E6%B5%81%E7%A8%8B%E4%BB%8B%E7%BB%8D" class="hide"/>
+    <a class="main-nav button" tabindex="0" href="http://oh-my-cap.wangliang.one/procedures/intro-to-procedures/" >
+      <span>流程介绍</span></a></li><li class="no-select" itemscope itemtype="http://schema.org/SiteNavigationElement">
+    <input type="checkbox" id="nav-%E8%AE%A1%E7%AE%97%E6%A0%BC%E6%9E%97%E5%87%BD%E6%95%B0" class="hide"/>
+    <a class="main-nav button" tabindex="0" href="http://oh-my-cap.wangliang.one/procedures/gflib/" >
+      <span>计算格林函数</span></a></li><li class="no-select" itemscope itemtype="http://schema.org/SiteNavigationElement">
+    <input type="checkbox" id="nav-%E6%95%B0%E6%8D%AE%E9%A2%84%E5%A4%84%E7%90%86" class="hide"/>
+    <a class="main-nav button" tabindex="0" href="http://oh-my-cap.wangliang.one/procedures/preprocess/" >
+      <span>数据预处理</span></a></li><li class="no-select" itemscope itemtype="http://schema.org/SiteNavigationElement">
+    <input type="checkbox" id="nav-%E5%8F%8D%E6%BC%94" class="hide"/>
+    <a class="main-nav button" tabindex="0" href="http://oh-my-cap.wangliang.one/procedures/inversion/" >
+      <span>反演</span></a></li>
+    </ul></li><li class="no-select" itemscope itemtype="http://schema.org/SiteNavigationElement">
+    <input type="checkbox" id="nav-%E4%BB%A3%E7%A0%81%E5%B7%AE%E5%BC%82" class="hide"/>
+    <a class="main-nav button" tabindex="0" href="http://oh-my-cap.wangliang.one/code-diffs/" >
+      <span>代码差异</span></a></li></ul>
+        </nav>
+      </div>
+      <div id="main-container" class="row" role="main" itemprop="mainContentOfPage">
         
-        <meta name="author" content="wangliang1989">
-        <link rel="canonical" href="https://wangliang.one/oh-my-cap/">
-        <link rel="shortcut icon" href="./img/favicon.ico">
-
-	<title>Oh My CAP</title>
-
-        <link href="./css/bootstrap-custom.min.css" rel="stylesheet">
-        <link href="./css/font-awesome-4.5.0.css" rel="stylesheet">
-        <link href="./css/base.css" rel="stylesheet">
-        <link rel="stylesheet" href="./css/highlight.css">
-
-        <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
-        <!--[if lt IE 9]>
-            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-            <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
-        <![endif]-->
-
         
-    </head>
+        
+<main id="post-list" class="row-item small-full medium-two-thirds">
+  
+  
+  
+  
+  
+    
+    
 
-    <body class="homepage">
+    
+    
+    
+    
+      
+    
+    
 
-        <div class="navbar navbar-default navbar-fixed-top" role="navigation">
-    <div class="container">
-
-        <!-- Collapsed navigation -->
-        <div class="navbar-header">
-            
-            <!-- Expander button -->
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
-            
-
-            <!-- Main title -->
-            <a class="navbar-brand" href=".">Oh My CAP</a>
-        </div>
-
-        <!-- Expanded navigation -->
-        <div class="navbar-collapse collapse">
-            
-                <!-- Main navigation -->
-                <ul class="nav navbar-nav">
-                
-                
-                    <li class="active">
-                        <a href=".">简介</a>
-                    </li>
-                
-                
-                
-                    <li >
-                        <a href="install/">安装</a>
-                    </li>
-                
-                
-                
-                    <li >
-                        <a href="quick-start/">快速开始</a>
-                    </li>
-                
-                
-                
-                    <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">流程 <b class="caret"></b></a>
-                        <ul class="dropdown-menu">
-                        
-                            
-<li >
-    <a href="intro-to-procedures/">流程简介</a>
-</li>
-
-                        
-                            
-<li >
-    <a href="gflib/">计算格林函数</a>
-</li>
-
-                        
-                            
-<li >
-    <a href="preprocess/">数据预处理</a>
-</li>
-
-                        
-                            
-<li >
-    <a href="inversion/">反演</a>
-</li>
-
-                        
-                        </ul>
-                    </li>
-                
-                
-                
-                    <li >
-                        <a href="parameter/">反演参数</a>
-                    </li>
-                
-                
-                
-                    <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">其他 <b class="caret"></b></a>
-                        <ul class="dropdown-menu">
-                        
-                            
-<li >
-    <a href="code-diffs/">代码差异</a>
-</li>
-
-                        
-                        </ul>
-                    </li>
-                
-                
-                
-                    <li >
-                        <a href="FAQs/">FAQ</a>
-                    </li>
-                
-                
-                </ul>
-            
-
-            <ul class="nav navbar-nav navbar-right">
-                <li>
-                    <a href="#" data-toggle="modal" data-target="#mkdocs_search_modal">
-                        <i class="fa fa-search"></i> Search
-                    </a>
-                </li>
-                
-                    <li class="disabled">
-                        <a rel="next" >
-                            <i class="fa fa-arrow-left"></i> Previous
-                        </a>
-                    </li>
-                    <li >
-                        <a rel="prev" href="install/">
-                            Next <i class="fa fa-arrow-right"></i>
-                        </a>
-                    </li>
-                
-                
-                    <li>
-                        <a href="https://github.com/wangliang1989/oh-my-cap">
-                            
-                                <i class="fa fa-github"></i>
-                            
-                            GitHub
-                        </a>
-                    </li>
-                
-            </ul>
-        </div>
+    
+    
+      
+        <article itemprop="blogPosts" itemscope itemtype="http://schema.org/BlogPosting"><div>
+    <header class="post-list-title">
+      <a href="http://oh-my-cap.wangliang.one/post/new-website/">
+        <h2 itemprop="headline">项目网站全面改版</h2>
+      </a><div class="metadata">
+        <span class="fa fa-clock-o"></span>
+        <time datetime="2017-09-01" itemprop="datePublished">September 01, 2017</time>
+      </div></header>
+    <div class="post-list-summary" itemprop="description">
+      <p>我改版了项目网页，新用的模板有更清晰的代码高亮和博客功能。后者可以使网页更加灵活。今后在新的博客版块会发布项目相关的新闻和专门问题的讲解。</p>
     </div>
+  </div>
+</article>
+
+      
+    
+
+    
+  
+</main>
+
+        <aside class="row-item small-full medium-third right" itemscope itemtype="http://schema.org/WPSideBar">
+  
+  <div class="widget" id="search-container">
+  <header>
+		<span class="widget-header"><span class="fa fa-search"></span> Search</span>
+	</header>
+	<input type="search" name="search" id="searchbox" placeholder="Search..." autocomplete="off"/>
+  <div id="search-results" class="hide"></div>
 </div>
+	<div class="widget">
+	<header>
+		<span class="widget-header"><span class="fa fa-pencil"></span> <a href="http://oh-my-cap.wangliang.one/post/">Recent Posts</a></span>
+	</header>
+	
+	<a class="widget-header-small button" href="http://oh-my-cap.wangliang.one/index.xml"><span class="fa fa-rss"></span> Subscribe to the Site</a>
+	<ul><li><a href="http://oh-my-cap.wangliang.one/post/new-website/">项目网站全面改版</a></li></ul>
+</div>
+  
+	
+	
+</aside>
 
-        <div class="container">
-            
-                <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
-    <ul class="nav bs-sidenav">
-    
-        <li class="main active"><a href="#oh-my-cap">Oh My CAP</a></li>
-        
-            <li><a href="#cap">CAP 简介</a></li>
-        
-            <li><a href="#oh-my-cap_1">Oh My CAP是什么</a></li>
-        
-            <li><a href="#_1">联系方式</a></li>
-        
-            <li><a href="#_2">致谢</a></li>
-        
-            <li><a href="#_3">版权协议</a></li>
-        
-            <li><a href="#_4">参考文献</a></li>
-        
-    
-    </ul>
-</div></div>
-                <div class="col-md-9" role="main">
-
-<h1 id="oh-my-cap">Oh My CAP</h1>
-<h2 id="cap">CAP 简介</h2>
-<p>CAP 方法，即 <strong>C</strong>ut <strong>A</strong>nd <strong>P</strong>aste 方法，是一种将连续地震波形切割成多个波形片段来反演震源机制解的方法。该方法主要由 <a href="http://www.eas.slu.edu/People/LZhu/home.html">朱露培教授</a> 发展和实现。</p>
-<p>CAP 程序有三个不同的版本：CAP、gCAP 和 gCAP3D。</p>
-<ul>
-<li>CAP 是朱露培教授早期实现的代码，可用于反演双力偶解。该版本仅通过私下交流传播，代码并未在网络上开源；</li>
-<li>gCAP 在 CAP 的基础上增加了反演完整矩张量解的功能。gCAP 于2013年在网络上开源。</li>
-<li>gCAP3D 在 gCAP 的基础上增加了使用三维模型下的格林函数进行反演的功能。gCAP3D 于2016年在网络上开源。</li>
-</ul>
-<h2 id="oh-my-cap_1">Oh My CAP是什么</h2>
-<p>CAP 是计算震源机制的一种非常常用的方法，很多地震学同行都需要学习、使用和研究它。
-然而实际使用中会遇到如下一些困难：</p>
-<ol>
-<li>无法正确安装 CAP；</li>
-<li>因为各种原因，拿到的 CAP 源文件不是朱露培教授发布的官方版本，而是从其他人手中得到的修改版。这导致使用的程序很可能彼此不一样，甚至是经过了较大改动的，而且做了哪些改动又不得而知，进而导致与他人交流过程出现障碍；</li>
-<li>不清楚如何从最原始的 SEED 或 SAC 数据开始，如何一步一步处理数据、计算格林函数并做反演</li>
-</ol>
-<p>为了帮助 CAP 初学者解决这些问题，我基于 gCAP1.0 建立了 Oh My CAP 这个开源项目，总结整理了我在使用 CAP 中的经验，并提供一个学习、探讨 CAP 的平台。</p>
-<p>目前，Oh My CAP 项目具有如下功能：</p>
-<ol>
-<li>整合了使用 CAP 所需的软件源码</li>
-<li>详细的安装指南</li>
-<li>完整的数据处理流程以及示例</li>
-</ol>
-<h2 id="_1">联系方式</h2>
-<p><strong><a href="http://wangliang.one">王亮</a></strong>  桂林理工大学</p>
-<p>Email： <a href="">wangliang.one@foxmail.com</a></p>
-<p>CAP 讨论 QQ 群：580712662</p>
-<p><a href="http://wangliang.one/#contact">直接留言</a></p>
-<p>欢迎任何人加入到该项目的更新与维护中！</p>
-<h2 id="_2">致谢</h2>
-<p>此项目是田冬冬鼓励我创建的。田冬冬指明了整个项目的发展方向，检查了项目内所有的内容，选了网页的引擎和主题。没有冬冬的鼓励、指导和帮助就不会有这个项目的发布，在这里郑重致谢！</p>
-<h2 id="_3">版权协议</h2>
-<p>本项目中所使用的 fk、pssac 以及 gcap 的源码因为修改自 Prof. Zhu 的原始代码，遵循 GPL 协议，任何人均可免费获取、使用、修改和再发布代码，但是修改后的版本必须也公开并按 GPL 协议授权。</p>
-<p>本项目中的其余源码以及文档采用更加宽松的 Apache 协议，即在尊重本项目署名权的前提下，可以选择不公开自己的修改。</p>
-<h2 id="_4">参考文献</h2>
-<ol>
-<li>Zhu, L., and D. V. Helmberger, 1996, Advancements in source estimation techniques using broadband regional seismograms. <em>BSSA</em>, 86, 1634-1641. (78)</li>
-<li>Zhu L, Ben-Zion Y. Parametrization of general seismic potency and moment tensors for source inversion of seismic waveform data[J]. <em>Geophysical Journal International</em>, 2013, 194(2): 839-843.</li>
-</ol></div>
-            
+      </div>
+      <footer class="row">
+        <div class="small-full medium-half row-item small-text-center medium-text-left medium-left">
+          <small>
+            &copy; 2017
+            <span itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+              <span itemprop="name">Oh My CAP</span>
+            </span>
+          </small>
         </div>
-
-        <footer class="col-md-12">
-            <hr>
-            
-            <p>Documentation built with <a href="http://www.mkdocs.org/">MkDocs</a>.</p>
-        </footer>
-
-        <script src="./js/jquery-1.10.2.min.js"></script>
-        <script src="./js/bootstrap-3.0.3.min.js"></script>
-        <script src="./js/highlight.pack.js"></script>
-        <script>var base_url = '.';</script>
-        <script data-main="./mkdocs/js/search.js" src="./mkdocs/js/require.js"></script>
-        <script src="./js/base.js"></script>
-
-        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="Search Modal" aria-hidden="true">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-                        <h4 class="modal-title" id="exampleModalLabel">Search</h4>
-                    </div>
-                    <div class="modal-body">
-                        <p>
-                            From here you can search these documents. Enter
-                            your search terms below.
-                        </p>
-                        <form role="form">
-                            <div class="form-group">
-                                <input type="text" class="form-control" placeholder="Search..." id="mkdocs-search-query">
-                            </div>
-                        </form>
-                        <div id="mkdocs-search-results"></div>
-                    </div>
-                    <div class="modal-footer">
-                    </div>
-                </div>
-            </div>
+        
+        <div class="small-full medium-half row-item small-text-center medium-text-right" id="social-icons">
+          
+          
+          <a href="https://github.com/wangliang1989/oh-my-cap" rel="me nofollow">
+            <span class="fa fa-github"></span>
+          </a>
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
         </div>
-
-    </body>
+      </footer>
+    </div><script src="https://unpkg.com/lunr/lunr.js"></script>
+    <script src="http://oh-my-cap.wangliang.one/js/search.js" type="text/javascript"></script>
+    
+    <script>
+      var lunrIndex = undefined;
+      loadIndex("http:\/\/oh-my-cap.wangliang.one\/index.json").then(
+        function(index) { lunrIndex = index; },
+        function(status){}
+      );
+    </script></body>
 </html>
-
-<!--
-MkDocs version : 0.15.3
-Build Date UTC : 2016-10-22 10:18:07.540546
--->

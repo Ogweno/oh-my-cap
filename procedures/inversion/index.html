@@ -1,0 +1,333 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>反演</title>
+
+    
+    <link rel="dns-prefetch" href="https://maxcdn.bootstrapcdn.com/" />
+    <link rel="preconnect" href="https://maxcdn.bootstrapcdn.com/" />
+    <link rel="dns-prefetch" href="https://unpkg.com/" />
+    <link rel="preconnect" href="https://unpkg.com/" />
+    
+    <link rel="prefetch" href="https://unpkg.com/lunr/lunr.js" />
+    <link rel="prefetch" href="http://oh-my-cap.wangliang.one/js/search.min.js" />
+    <link rel="prefetch" href="http://oh-my-cap.wangliang.one/index.json" />
+    <meta name="description" itemprop="description" content="&lt;h2 id=&#34;权重文件&#34;&gt;权重文件&lt;/h2&gt;  &lt;p&gt;在事件目录下，需要一个与之对应的权重文件 &lt;code&gt;weight.dat&lt;/code&gt;。权重文件中指定了每个台站的5段波形数据在反演中的权重。 &lt;/p&gt;" id="desc"><meta name="generator" content="Hugo 0.25.1" /><link rel="canonical" href="http://oh-my-cap.wangliang.one/procedures/inversion/">
+
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="prefetch stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+
+    
+    <link rel="prefetch stylesheet" type="text/css" href="http://oh-my-cap.wangliang.one/styles.css">
+
+    <script>var _paq = undefined;</script></head>
+  <body itemscope itemtype="http://schema.org/WebPage">
+    <div id="site-container">
+      <div id="site-header">
+        <header class="small-text-center medium-text-left">
+          <a href="http://oh-my-cap.wangliang.one">
+            <span id="site-title" itemprop="name">Oh My CAP</span>
+            <br/><span id="site-tagline">世间最庄严的问题是：我能做什么好事？</span>
+          </a>
+        </header>
+        <label for="menu-toggle-box"><div id="menu-toggle" class="main-nav no-select"><span><span class="fa fa-bars"></span> MENU</span></div></label>
+        <input type="checkbox" id="menu-toggle-box" class="hide"/>
+        <nav id="main-nav">
+          <ul class="menu"><li class="no-select" itemscope itemtype="http://schema.org/SiteNavigationElement">
+    <input type="checkbox" id="nav-%E5%8D%9A%E5%AE%A2" class="hide"/>
+    <a class="main-nav button" tabindex="0" href="http://oh-my-cap.wangliang.one/post/" >
+      <span>博客</span><label for="nav-%E5%8D%9A%E5%AE%A2">
+        &nbsp;&nbsp;<span class="nav-arrow">&#9656;</span>
+      </label></a><ul>
+    <li class="no-select" itemscope itemtype="http://schema.org/SiteNavigationElement">
+    <input type="checkbox" id="nav-%E9%A1%B9%E7%9B%AE%E7%BD%91%E7%AB%99%E5%85%A8%E9%9D%A2%E6%94%B9%E7%89%88" class="hide"/>
+    <a class="main-nav button" tabindex="0" href="http://oh-my-cap.wangliang.one/post/new-website/" >
+      <span>项目网站全面改版</span></a></li>
+    </ul></li><li class="no-select" itemscope itemtype="http://schema.org/SiteNavigationElement">
+    <input type="checkbox" id="nav-%E6%96%B0%E6%89%8B%E5%85%A5%E9%97%A8" class="hide"/>
+    <a class="main-nav button" tabindex="0" href="http://oh-my-cap.wangliang.one/about/" >
+      <span>新手入门</span></a></li><li class="no-select" itemscope itemtype="http://schema.org/SiteNavigationElement">
+    <input type="checkbox" id="nav-%E5%AE%89%E8%A3%85" class="hide"/>
+    <a class="main-nav button" tabindex="0" href="http://oh-my-cap.wangliang.one/install/" >
+      <span>安装</span></a></li><li class="no-select" itemscope itemtype="http://schema.org/SiteNavigationElement">
+    <input type="checkbox" id="nav-%E5%BF%AB%E9%80%9F%E5%BC%80%E5%A7%8B" class="hide"/>
+    <a class="main-nav button" tabindex="0" href="http://oh-my-cap.wangliang.one/quick-start/" >
+      <span>快速开始</span></a></li><li class="no-select" itemscope itemtype="http://schema.org/SiteNavigationElement">
+    <input type="checkbox" id="nav-%E6%B5%81%E7%A8%8B" class="hide"/>
+    <a class="main-nav button active" tabindex="0" href="http://oh-my-cap.wangliang.one/procedures/" >
+      <span>流程</span><label for="nav-%E6%B5%81%E7%A8%8B">
+        &nbsp;&nbsp;<span class="nav-arrow">&#9656;</span>
+      </label></a><ul>
+    <li class="no-select" itemscope itemtype="http://schema.org/SiteNavigationElement">
+    <input type="checkbox" id="nav-%E6%B5%81%E7%A8%8B%E4%BB%8B%E7%BB%8D" class="hide"/>
+    <a class="main-nav button" tabindex="0" href="http://oh-my-cap.wangliang.one/procedures/intro-to-procedures/" >
+      <span>流程介绍</span></a></li><li class="no-select" itemscope itemtype="http://schema.org/SiteNavigationElement">
+    <input type="checkbox" id="nav-%E8%AE%A1%E7%AE%97%E6%A0%BC%E6%9E%97%E5%87%BD%E6%95%B0" class="hide"/>
+    <a class="main-nav button" tabindex="0" href="http://oh-my-cap.wangliang.one/procedures/gflib/" >
+      <span>计算格林函数</span></a></li><li class="no-select" itemscope itemtype="http://schema.org/SiteNavigationElement">
+    <input type="checkbox" id="nav-%E6%95%B0%E6%8D%AE%E9%A2%84%E5%A4%84%E7%90%86" class="hide"/>
+    <a class="main-nav button" tabindex="0" href="http://oh-my-cap.wangliang.one/procedures/preprocess/" >
+      <span>数据预处理</span></a></li><li class="no-select" itemscope itemtype="http://schema.org/SiteNavigationElement">
+    <input type="checkbox" id="nav-%E5%8F%8D%E6%BC%94" class="hide"/>
+    <a class="main-nav button active" tabindex="0" href="http://oh-my-cap.wangliang.one/procedures/inversion/" >
+      <span>反演</span></a></li>
+    </ul></li><li class="no-select" itemscope itemtype="http://schema.org/SiteNavigationElement">
+    <input type="checkbox" id="nav-%E4%BB%A3%E7%A0%81%E5%B7%AE%E5%BC%82" class="hide"/>
+    <a class="main-nav button" tabindex="0" href="http://oh-my-cap.wangliang.one/code-diffs/" >
+      <span>代码差异</span></a></li></ul>
+        </nav>
+      </div>
+      <div id="main-container" class="row" role="main" itemprop="mainContentOfPage">
+        
+        
+        
+<main class="row-item small-full medium-two-thirds" >
+  <article id="post-article" itemscope itemtype="http://schema.org/Article" itemref="desc">
+    <header id="page-header">
+      <h1 itemprop="headline">反演</h1><p id="post-metadata" class="row"><span class="row-item">
+          <span class="fa fa-folder"></span>
+          <a href="http://oh-my-cap.wangliang.one/categories/pages" rel="category">Pages</a>
+        </span><span class="row-item">Estimated reading time: ~<span itemprop="timeRequired">2 minutes</span></span></p>
+      
+    </header>
+    
+    <div id="post-content"><nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li><a href="#权重文件">权重文件</a>
+<ul>
+<li><a href="#权重文件格式">权重文件格式</a></li>
+<li><a href="#生成权重文件">生成权重文件</a></li>
+</ul></li>
+<li><a href="#时窗截取">时窗截取</a></li>
+<li><a href="#反演">反演</a>
+<ul>
+<li><a href="#执行反演">执行反演</a></li>
+<li><a href="#结果解释">结果解释</a></li>
+<li><a href="#反演多个深度的结果">反演多个深度的结果</a></li>
+</ul></li>
+</ul></li>
+</ul>
+</nav>
+      <span itemprop="articleBody"><h2 id="权重文件">权重文件</h2>
+
+<p>在事件目录下，需要一个与之对应的权重文件 <code>weight.dat</code>。权重文件中指定了每个台站的5段波形数据在反演中的权重。
+</p>
+
+<h3 id="权重文件格式">权重文件格式</h3>
+
+<p>权重文件的格式为：</p>
+
+<pre><code>station_name dist w1 w2 w3 w4 w5 tp ts
+</code></pre>
+
+<ul>
+<li>第1列是台站名，需要与 SAC 文件名（后缀除外）一致</li>
+<li>第2列指定了该台站要使用哪个震中距的格林函数。gCAP 在反演时，会根据该震中距去找对应的格林函数文件 <code>dist.grn.?</code>，并将其与台站的实际观测数据进行对比。因而，理论上此处的 <code>dist</code> 应等于实际观测数据的震中距。但实际使用时为了避免每一个地震都要算一遍格林函数，因而 <code>dist</code> 只需要取格林函数库中与实际观测数据震中距最近的值即可。</li>
+<li><code>w1</code> 至 <code>w5</code> 代表了 PnlZ、PnlR、Z、R、T 五段波形的权重，默认值为1。可以根据各段波形的数据质量将权重设置为0到1中的任意值。</li>
+<li>若 <code>tp</code> 是正数，则其表示 Pnl 波的到时</li>
+<li>若 <code>ts</code> 是 S 波实际到时减理论到时</li>
+</ul>
+
+<p>额外的说明：</p>
+
+<ol>
+<li>若 <code>w2</code> 值为 <code>-1</code>，就表示对应的台站是远震台，只使用 P (PnlZ) 和 SH (T) 波形段，此时若 <code>ts</code> 为正值则表示 S 波到时</li>
+</ol>
+
+<h3 id="生成权重文件">生成权重文件</h3>
+
+<p><code>example/weight.pl</code> 是一个用于生成权重文件的脚本。执行如下命令，则会生成权重文件 <code>example/20080418093658/weight.dat</code>：</p>
+
+<pre><code>$ perl weight.pl 20080418093658
+</code></pre>
+
+<p>生成权重文件之前，可以手动观察一下数据质量。如果不想使用某数据，可以在相应的 Z 分量的头段 t9 上随意标一个到时。脚本在发现某数据的 t9 头段值不是 -12345 后，权重值会定为 0，从而在反演时不使用这个数据。</p>
+
+<p>权重文件的内容是：</p>
+
+<pre><code>  IU_WCI      140 1 1 1 1 1  20.2   0.0
+  NM_BLO      140 1 1 1 1 1  20.4   0.0
+ NM_SIUC      145 1 1 1 1 1  21.2   0.0
+  NM_SLM      210 1 1 1 1 1  29.0   0.0
+  NM_FVM      235 1 1 1 1 1  31.8   0.0
+  IU_WVT      260 1 1 1 1 1  35.0   0.0
+ NM_PVMO      280 1 1 1 1 1  37.7   0.0
+  IU_CCM      300 1 1 1 1 1  40.3   0.0
+  NM_MPH      415 1 1 1 1 1  54.2   0.0
+</code></pre>
+
+<p>几点说明：</p>
+
+<ol>
+<li>此权重文件为自动生成，实际情况中需要根据波形质量以及反演结果对其中的参数进行微调</li>
+<li>示例数据中，每 5 km 震中距计算一个格林函数，因而权重文件中第2列都是5的倍数</li>
+
+<li><p>第8列中 <code>tp</code></p>
+
+<ul>
+<li>默认使用SAC头段 <code>T1</code> 的值（即用户手动标定的P波到时）</li>
+<li>若 <code>T1</code> 未定义，则使用头段 <code>T0</code> 的值（即 TauP 标记的理论到时）</li>
+<li>若未安装 TauP 而导致头段 <code>T0</code> 未定义，则默认值为 0</li>
+</ul></li>
+</ol>
+
+<h2 id="时窗截取">时窗截取</h2>
+
+<p>CAP 会把完整的波形记录切割成两个时间窗口：Pnl 和面波窗口。时间窗口的定义方式如下：</p>
+
+<ol>
+<li>若 SAC 文件 Z 分量的 <code>t1</code> 和 <code>t2</code> 以及 T 分量的 <code>t3</code> 和 <code>t4</code> 有定义，则将四个时间依次作为 Pnl 起点、终点和面波的起点、终点</li>
+
+<li><p>若条件 1 不满足，且在反演时用 <code>-V</code> 选项给了视速度，则会用下面的公式计算 t1、t2、t3 和 t4：</p>
+
+<pre><code>t1 = dist/vp - 0.2*m1, t2 = ts
+t3 = dist/vLove - 0.3*m2, t4 = dist/vRayleigh + 0.7*m2
+</code></pre></li>
+
+<li><p>若条件 1 和 2 均不满足，则使用下面的公式计算：</p>
+
+<pre><code>t1 = tp - 0.2*m1,  t2 = ts
+t3 = ts - 0.3*m2,  t4 = t3+m2
+</code></pre></li>
+</ol>
+
+<p>说明：</p>
+
+<ol>
+<li>以上几个公式的正确性尚待确认</li>
+<li><code>m1</code> 和 <code>m2</code> 决定了 Pnl 和面波时间窗口的最大长度，由 <code>-T</code> 选项控制</li>
+<li>上述公式内的 <code>dist</code> 是震源位置到台站的直线距离，程序在实际计算时是等于 <code>sqrt( distance^2 + depSqr)</code>，其中 <code>distance</code> 是震中距，而 <code>depSqr</code> 理应是震源深度的平方，但是程序实际是把 <code>depSqr</code> 固定为 25。尚不确定是否是BUG，但实际影响很小</li>
+<li><code>tp</code> 和 <code>ts</code> 是用的格林函数文件中的值，而不是权重文件中的值</li>
+</ol>
+
+<h2 id="反演">反演</h2>
+
+<h3 id="执行反演">执行反演</h3>
+
+<p>在 <code>example/</code> 目录下执行命令：</p>
+
+<pre><code>$ cap.pl -H0.2 -P0.3 -S5/10/0 -T35/70 -D2/1/0.5 -C0.05/0.3/0.02/0.1 -W1 -X10 -Mmodel_15/5.0 20080418093658
+</code></pre>
+
+<p>即可得到反演结果。反演命令中每个参数的含义见 <a href="http://wangliang.one/oh-my-cap/parameter/">反演参数</a>。</p>
+
+<h3 id="结果解释">结果解释</h3>
+
+<p>执行以上命令后，会看到如下输出：</p>
+
+<pre><code>20080418093658 15 1
+Warning: flag=21 =&gt; the minimum 295.1/90.0/  1.7 is at boundary
+inversion done
+</code></pre>
+
+<p>第二行的警告是因为 NM_MPH 台的位置很特殊，刚好在节面上，可以打开 sac，看看这个台的波形可以看到其 P 波非常弱。可以将权重文件中 NM_MPH 台的五个权重全部改为 0，警告就会消失。如果没有看到第三行 inversion done 这样的提示，说明并没有进行反演，多半是因为忘记生成了权重文件。</p>
+
+<p>打开 <code>example/20080418093658/model_15.ps</code>，可以看到反演的结果。震源球右侧的三行文字分别表示：</p>
+
+<ul>
+<li>第一行给出了事件ID（<code>20080418093658</code>），反演使用的模型 <code>model</code> 以及震源深度 <code>15 km</code></li>
+<li>机制解（FM）的参数是 <code>295 90 1</code>，即走向是 295 度，倾角是 90 度，滑移角是 1 度，说明这是一个走滑断层。震级为 5.21 Mw。残差为 <code>2.211e-2</code>。</li>
+</ul>
+
+<p>下面的每一排波形代表一个台站的拟合情况，波形图中红色的理论波形，黑色的是实际的波形。台站名下方的两个数字是震中距和偏移时间，如 <code>IU_WCI</code> 下面的 <code>137.5/-1.89</code> 表示震中距是 137.5 公里，波形向前移动了 1.89 秒，每一列震相下面的数字是拟合度和该震相的波形偏移。</p>
+
+<h3 id="反演多个深度的结果">反演多个深度的结果</h3>
+
+<p>执行 <code>example/inversion.pl</code> 脚本即可反演多个深度的结果：</p>
+
+<pre><code>$ perl inversion.pl 20080418093658
+</code></pre>
+
+<p>执行 <code>example/get_depth.pl</code> 即可求出最佳深度和误差估计：</p>
+
+<pre><code>$ perl get_depth.pl 20080418093658
+</code></pre></span>
+    </div><div id="authorbox" class="row vcenter memberbox" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    		<div class="row-item member-avatar" itemprop="image" itemscope itemtype="http://schema.org/ImageObject">
+    				<img alt="王亮 avatar" src="http://oh-my-cap.wangliang.one/images/profile.jpg" itemprop="contentUrl" />
+    		</div>
+    		<div class="row-item member-bio">
+    			<div>
+    				<span class="widget-title">About <span itemprop="name">王亮</span></span>
+    			</div>
+    			<p itemprop="description">
+I&#39;m a PHD candidate from CDUT.
+</p>
+    		</div>
+    	</div></article>
+
+  </main>
+
+        <aside class="row-item small-full medium-third right" itemscope itemtype="http://schema.org/WPSideBar">
+  
+  <div class="widget" id="search-container">
+  <header>
+		<span class="widget-header"><span class="fa fa-search"></span> Search</span>
+	</header>
+	<input type="search" name="search" id="searchbox" placeholder="Search..." autocomplete="off"/>
+  <div id="search-results" class="hide"></div>
+</div>
+	<div class="widget">
+	<header>
+		<span class="widget-header"><span class="fa fa-pencil"></span> <a href="http://oh-my-cap.wangliang.one/post/">Recent Posts</a></span>
+	</header>
+	
+	<a class="widget-header-small button" href="http://oh-my-cap.wangliang.one/index.xml"><span class="fa fa-rss"></span> Subscribe to the Site</a>
+	<ul><li><a href="http://oh-my-cap.wangliang.one/post/new-website/">项目网站全面改版</a></li></ul>
+</div>
+  
+	
+	
+</aside>
+
+      </div>
+      <footer class="row">
+        <div class="small-full medium-half row-item small-text-center medium-text-left medium-left">
+          <small>
+            &copy; 2017
+            <span itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+              <span itemprop="name">Oh My CAP</span>
+            </span>
+          </small>
+        </div>
+        
+        <div class="small-full medium-half row-item small-text-center medium-text-right" id="social-icons">
+          
+          
+          <a href="https://github.com/wangliang1989/oh-my-cap" rel="me nofollow">
+            <span class="fa fa-github"></span>
+          </a>
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+        </div>
+      </footer>
+    </div><script src="https://unpkg.com/lunr/lunr.js"></script>
+    <script src="http://oh-my-cap.wangliang.one/js/search.js" type="text/javascript"></script>
+    
+    <script>
+      var lunrIndex = undefined;
+      loadIndex("http:\/\/oh-my-cap.wangliang.one\/index.json").then(
+        function(index) { lunrIndex = index; },
+        function(status){}
+      );
+    </script></body>
+</html>

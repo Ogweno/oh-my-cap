@@ -1,82 +1,72 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-
-    
-    <url>
-     <loc>https://wangliang.one/oh-my-cap//</loc>
-     <lastmod>2016-10-22</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    
-
-    
-    <url>
-     <loc>https://wangliang.one/oh-my-cap//install/</loc>
-     <lastmod>2016-10-22</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    
-
-    
-    <url>
-     <loc>https://wangliang.one/oh-my-cap//quick-start/</loc>
-     <lastmod>2016-10-22</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    
-
-    
-        
-    <url>
-     <loc>https://wangliang.one/oh-my-cap//intro-to-procedures/</loc>
-     <lastmod>2016-10-22</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-        
-    <url>
-     <loc>https://wangliang.one/oh-my-cap//gflib/</loc>
-     <lastmod>2016-10-22</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-        
-    <url>
-     <loc>https://wangliang.one/oh-my-cap//preprocess/</loc>
-     <lastmod>2016-10-22</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-        
-    <url>
-     <loc>https://wangliang.one/oh-my-cap//inversion/</loc>
-     <lastmod>2016-10-22</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-        
-    
-
-    
-    <url>
-     <loc>https://wangliang.one/oh-my-cap//parameter/</loc>
-     <lastmod>2016-10-22</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    
-
-    
-        
-    <url>
-     <loc>https://wangliang.one/oh-my-cap//code-diffs/</loc>
-     <lastmod>2016-10-22</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-        
-    
-
-    
-    <url>
-     <loc>https://wangliang.one/oh-my-cap//FAQs/</loc>
-     <lastmod>2016-10-22</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    
-
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  
+  <url>
+    <loc>http://oh-my-cap.wangliang.one/procedures/intro-to-procedures/</loc>
+  </url>
+  
+  <url>
+    <loc>http://oh-my-cap.wangliang.one/about/</loc>
+  </url>
+  
+  <url>
+    <loc>http://oh-my-cap.wangliang.one/procedures/gflib/</loc>
+  </url>
+  
+  <url>
+    <loc>http://oh-my-cap.wangliang.one/install/</loc>
+  </url>
+  
+  <url>
+    <loc>http://oh-my-cap.wangliang.one/procedures/preprocess/</loc>
+  </url>
+  
+  <url>
+    <loc>http://oh-my-cap.wangliang.one/procedures/inversion/</loc>
+  </url>
+  
+  <url>
+    <loc>http://oh-my-cap.wangliang.one/quick-start/</loc>
+  </url>
+  
+  <url>
+    <loc>http://oh-my-cap.wangliang.one/code-diffs/</loc>
+  </url>
+  
+  <url>
+    <loc>http://oh-my-cap.wangliang.one/post/new-website/</loc>
+    <lastmod>2017-09-01T00:00:00+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://oh-my-cap.wangliang.one/categories/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://oh-my-cap.wangliang.one/</loc>
+    <lastmod>2017-09-01T00:00:00+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://oh-my-cap.wangliang.one/categories/pages/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://oh-my-cap.wangliang.one/tags/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://oh-my-cap.wangliang.one/post/</loc>
+    <lastmod>2017-09-01T00:00:00+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://oh-my-cap.wangliang.one/procedures/</loc>
+  </url>
+  
 </urlset>

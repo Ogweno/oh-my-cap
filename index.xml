@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Oh My CAP</title>
+    <link>http://oh-my-cap.wangliang.one/</link>
+    <description>Recent content on Oh My CAP</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Fri, 01 Sep 2017 00:00:00 +0800</lastBuildDate>
+    <atom:link href="http://oh-my-cap.wangliang.one/" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>项目网站全面改版</title>
+      <link>http://oh-my-cap.wangliang.one/post/new-website/</link>
+      <pubDate>Fri, 01 Sep 2017 00:00:00 +0800</pubDate>
+      
+      <guid>http://oh-my-cap.wangliang.one/post/new-website/</guid>
+      <description>我改版了项目网页，新用的模板有更清晰的代码高亮和博客功能。后者可以使网页更加灵活。今后在新的博客版块会发布项目相关的新闻和专门问题的讲解。</description>
+    </item>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+  </channel>
+</rss>
