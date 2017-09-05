@@ -41,6 +41,9 @@
         &nbsp;&nbsp;<span class="nav-arrow">&#9656;</span>
       </label></a><ul>
     <li class="no-select" itemscope itemtype="http://schema.org/SiteNavigationElement">
+    <input type="checkbox" id="nav-1.1-%E7%89%88%E5%8F%91%E5%B8%83" class="hide"/>
+    <a class="main-nav button" tabindex="0" href="http://oh-my-cap.wangliang.one/post/release-1.1/" >
+      <span>1.1 版发布</span></a></li><li class="no-select" itemscope itemtype="http://schema.org/SiteNavigationElement">
     <input type="checkbox" id="nav-%E9%A1%B9%E7%9B%AE%E7%BD%91%E7%AB%99%E5%85%A8%E9%9D%A2%E6%94%B9%E7%89%88" class="hide"/>
     <a class="main-nav button" tabindex="0" href="http://oh-my-cap.wangliang.one/post/new-website/" >
       <span>项目网站全面改版</span></a></li>
@@ -125,10 +128,10 @@
 
 <ul>
 <li>第1列是台站名，需要与 SAC 文件名（后缀除外）一致</li>
-<li>第2列指定了该台站要使用哪个震中距的格林函数。gCAP 在反演时，会根据该震中距去找对应的格林函数文件 <code>dist.grn.?</code>，并将其与台站的实际观测数据进行对比。因而，理论上此处的 <code>dist</code> 应等于实际观测数据的震中距。但实际使用时为了避免每一个地震都要算一遍格林函数，因而 <code>dist</code> 只需要取格林函数库中与实际观测数据震中距最近的值即可。</li>
-<li><code>w1</code> 至 <code>w5</code> 代表了 PnlZ、PnlR、Z、R、T 五段波形的权重，默认值为1。可以根据各段波形的数据质量将权重设置为0到1中的任意值。</li>
+<li>第2列指定了该台站要使用哪个震中距的格林函数。gCAP 在反演时，会根据这里的震中距去找对应的格林函数文件 <code>dist.grn.?</code>，并将其与台站的实际观测数据进行对比。因而，理论上此处的 <code>dist</code> 应等于实际观测数据的震中距。但实际使用时为了避免每一个地震都要算一遍格林函数，因而 <code>dist</code> 只需要取格林函数库中与实际观测数据震中距最近的值即可。</li>
+<li><code>w1</code> 至 <code>w5</code> 代表了 PnlZ、PnlR、Z、R、T 五段波形的权重，默认值为 1。可以根据各段波形的数据质量将权重设置为 0 到 1 中的任意值。</li>
 <li>若 <code>tp</code> 是正数，则其表示 Pnl 波的到时</li>
-<li>若 <code>ts</code> 是 S 波实际到时减理论到时</li>
+<li><code>ts</code> 是 S 波实际到时减理论到时</li>
 </ul>
 
 <p>额外的说明：</p>
@@ -212,7 +215,7 @@ t3 = ts - 0.3*m2,  t4 = t3+m2
 <pre><code>$ cap.pl -H0.2 -P0.3 -S5/10/0 -T35/70 -D2/1/0.5 -C0.05/0.3/0.02/0.1 -W1 -X10 -Mmodel_15/5.0 20080418093658
 </code></pre>
 
-<p>即可得到反演结果。反演命令中每个参数的含义见 <a href="http://wangliang.one/oh-my-cap/parameter/">反演参数</a>。</p>
+<p>即可得到反演结果。</p>
 
 <h3 id="结果解释">结果解释</h3>
 
@@ -229,10 +232,12 @@ inversion done
 
 <ul>
 <li>第一行给出了事件ID（<code>20080418093658</code>），反演使用的模型 <code>model</code> 以及震源深度 <code>15 km</code></li>
-<li>机制解（FM）的参数是 <code>295 90 1</code>，即走向是 295 度，倾角是 90 度，滑移角是 1 度，说明这是一个走滑断层。震级为 5.21 Mw。残差为 <code>2.211e-2</code>。</li>
+<li>机制解（FM）的参数是 <code>295 90 2</code>，即走向是 295 度，倾角是 90 度，滑移角是 2 度，说明这是一个走滑断层。震级为 5.20 Mw。残差为 <code>1.881e-2</code>。</li>
 </ul>
 
 <p>下面的每一排波形代表一个台站的拟合情况，波形图中红色的理论波形，黑色的是实际的波形。台站名下方的两个数字是震中距和偏移时间，如 <code>IU_WCI</code> 下面的 <code>137.5/-1.89</code> 表示震中距是 137.5 公里，波形向前移动了 1.89 秒，每一列震相下面的数字是拟合度和该震相的波形偏移。</p>
+
+<p>有一点需要说明，也许你做出来的结果和我的有微小的差异。因为要写这个项目，这个事例，我做过多次，发现并不是每一次做出来的结果都一样，这一点，我尚不能解释，不过这种差异非常非常微小。</p>
 
 <h3 id="反演多个深度的结果">反演多个深度的结果</h3>
 
@@ -276,7 +281,7 @@ I&#39;m a PHD candidate from CDUT.
 	</header>
 	
 	<a class="widget-header-small button" href="http://oh-my-cap.wangliang.one/index.xml"><span class="fa fa-rss"></span> Subscribe to the Site</a>
-	<ul><li><a href="http://oh-my-cap.wangliang.one/post/new-website/">项目网站全面改版</a></li></ul>
+	<ul><li><a href="http://oh-my-cap.wangliang.one/post/release-1.1/">1.1 版发布</a></li><li><a href="http://oh-my-cap.wangliang.one/post/new-website/">项目网站全面改版</a></li></ul>
 </div>
   
 	

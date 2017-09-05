@@ -14,7 +14,7 @@
     <link rel="prefetch" href="https://unpkg.com/lunr/lunr.js" />
     <link rel="prefetch" href="http://oh-my-cap.wangliang.one/js/search.min.js" />
     <link rel="prefetch" href="http://oh-my-cap.wangliang.one/index.json" />
-    <meta name="description" itemprop="description" content="对于初学者。本安装文档的每一个字都需要阅读！ 以下安装步骤在 CentOS 上验证通过。在其他 Linux 发行版及 Mac 上安装步骤类似。 因为 gCAP 依赖的 SAC 几乎不可能在 Windows 上安装，所以本安装指南不适用于 Windows。 gCAP 依赖 SAC、GMT、fk 和 pssac。 安装编译工具 CentOS 用户 sudo yum install gcc gcc-c&#43;&#43; gcc-gfortran sudo yum install compat-gcc-44 compat-gcc-44-c&#43;&#43; compat-gcc-44-gfortran compat-libf2c-34 sudo yum install make  其他 Linux 发行版安装方法类似。请勿尝试安装 g77，gfortran 已经全面代替 g77 了。 MacOS 用户 MacOS 用户推荐使用 Homebrew 安装。 brew install gcc make  SAC 本项目依赖于 SAC v101.6a。 SAC 是非开源软件，需要向 IRIS 申请源码包或者二进制包。申请地址是 http://ds.iris.edu/ds/nodes/dmc/forms/sac/ 。" id="desc"><meta name="generator" content="Hugo 0.25.1" /><link rel="canonical" href="http://oh-my-cap.wangliang.one/install/">
+    <meta name="description" itemprop="description" content="对于初学者。本安装文档的每一个字都需要阅读！因为版权原因，我无法提供全部安装包，有困难请加群 580712662。 以下安装步骤在 CentOS 上验证通过。在其他 Linux 发行版及 Mac 上安装步骤类似。 因为 gCAP 依赖的 SAC 几乎不可能在 Windows 上安装，所以本安装指南不适用于 Windows。 gCAP 依赖 SAC、GMT、fk 和 pssac。 安装编译工具 CentOS 用户 sudo yum install gcc gcc-c&#43;&#43; gcc-gfortran sudo yum install compat-gcc-44 compat-gcc-44-c&#43;&#43; compat-gcc-44-gfortran compat-libf2c-34 sudo yum install make  其他 Linux 发行版安装方法类似。请勿尝试安装 g77，gfortran 已经全面代替 g77 了。 MacOS 用户 MacOS 用户推荐使用 Homebrew 安装。 brew install gcc make  SAC Oh My CAP 依赖 SAC v101.6a。 SAC 是免费而非开源软件。根据授权协议，我不能直接向你提供，你需要自己向 IRIS 申请源码包或者二进制包。申请地址是 http://ds." id="desc"><meta name="generator" content="Hugo 0.25.1" /><link rel="canonical" href="http://oh-my-cap.wangliang.one/install/">
 
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="prefetch stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
 
@@ -41,6 +41,9 @@
         &nbsp;&nbsp;<span class="nav-arrow">&#9656;</span>
       </label></a><ul>
     <li class="no-select" itemscope itemtype="http://schema.org/SiteNavigationElement">
+    <input type="checkbox" id="nav-1.1-%E7%89%88%E5%8F%91%E5%B8%83" class="hide"/>
+    <a class="main-nav button" tabindex="0" href="http://oh-my-cap.wangliang.one/post/release-1.1/" >
+      <span>1.1 版发布</span></a></li><li class="no-select" itemscope itemtype="http://schema.org/SiteNavigationElement">
     <input type="checkbox" id="nav-%E9%A1%B9%E7%9B%AE%E7%BD%91%E7%AB%99%E5%85%A8%E9%9D%A2%E6%94%B9%E7%89%88" class="hide"/>
     <a class="main-nav button" tabindex="0" href="http://oh-my-cap.wangliang.one/post/new-website/" >
       <span>项目网站全面改版</span></a></li>
@@ -105,12 +108,13 @@
 <li><a href="#pssac">pssac</a></li>
 <li><a href="#gcap">gCAP</a></li>
 <li><a href="#添加环境变量">添加环境变量</a></li>
+<li><a href="#安装-perl-的并行模块">安装 Perl 的并行模块</a></li>
 </ul></li>
 </ul>
 </nav>
       <span itemprop="articleBody">
 
-<p>对于初学者。本安装文档的每一个字都需要阅读！</p>
+<p>对于初学者。本安装文档的每一个字都需要阅读！因为版权原因，我无法提供全部安装包，有困难请加群 580712662。</p>
 
 <p>以下安装步骤在 CentOS 上验证通过。在其他 Linux 发行版及 Mac 上安装步骤类似。
 因为 gCAP 依赖的 SAC 几乎不可能在 Windows 上安装，所以本安装指南不适用于 Windows。</p>
@@ -137,9 +141,9 @@ sudo yum install make
 
 <h2 id="sac">SAC</h2>
 
-<p>本项目依赖于 SAC <strong>v101.6a</strong>。</p>
+<p>Oh My CAP 依赖 SAC <strong>v101.6a</strong>。</p>
 
-<p>SAC 是非开源软件，需要向 IRIS 申请源码包或者二进制包。申请地址是 <a href="http://ds.iris.edu/ds/nodes/dmc/forms/sac/">http://ds.iris.edu/ds/nodes/dmc/forms/sac/</a> 。</p>
+<p>SAC 是免费而非开源软件。根据授权协议，我不能直接向你提供，你需要自己向 IRIS 申请源码包或者二进制包。申请地址是 <a href="http://ds.iris.edu/ds/nodes/dmc/forms/sac/">http://ds.iris.edu/ds/nodes/dmc/forms/sac/</a> 。你要注意，这个审核是人工审核，别和 IRIS 耍花招。</p>
 
 <p>SAC 的安装参考：</p>
 
@@ -151,7 +155,7 @@ sudo yum install make
 
 <h2 id="gmt">GMT</h2>
 
-<p>本项目依赖于 GMT 4，不支持 GMT 5。</p>
+<p>gCAP 依赖 GMT4。</p>
 
 <p>GMT4 的安装请参考：</p>
 
@@ -160,7 +164,7 @@ sudo yum install make
 <li><a href="http://seisman.info/install-gmt4-under-mac.html">GMT 4 在 Mac 上的安装</a></li>
 </ul>
 
-<p>GMT 5用户可以参考 <a href="http://seisman.info/multiple-versions-of-gmt.html">GMT4 与 GMT5 双版本共存</a> 一文，以保证系统中存在GMT4和GMT5两个版本且不互相影响。</p>
+<p>GMT5 用户可以参考 <a href="http://seisman.info/multiple-versions-of-gmt.html">GMT4 与 GMT5 双版本共存</a> 一文，以保证系统中存在 GMT4 和 GMT5 两个版本且互不影响。</p>
 
 <h2 id="taup">TauP</h2>
 
@@ -169,8 +173,8 @@ sudo yum install make
 <h2 id="下载-oh-my-cap">下载 Oh My CAP</h2>
 
 <ol>
-<li><a href="https://github.com/wangliang1989/oh-my-cap/archive/v1.0.zip">zip 格式压缩包</a></li>
-<li><a href="https://github.com/wangliang1989/oh-my-cap/archive/v1.0.tar.gz">tar.gz 格式压缩包</a></li>
+<li><a href="https://github.com/wangliang1989/oh-my-cap/archive/v1.1.zip">zip 格式压缩包</a></li>
+<li><a href="https://github.com/wangliang1989/oh-my-cap/archive/v1.1.tar.gz">tar.gz 格式压缩包</a></li>
 </ol>
 
 <h2 id="fk">fk</h2>
@@ -202,7 +206,7 @@ sudo yum install make
 <p>gCAP 使用了商业软件 Numerical Recipes（简称 NR）中的一些子函数，
 包括 <code>matrix</code> 、 <code>free_matrix</code> 、 <code>free_convert_matrix</code> 、 <code>jacobi</code> 和 <code>eigsrt</code> 。
 由于版权原因，我不能把这几个子函数的源码直接放到这里。
-用户应自行获取缺失的源码，并将其放到 <code>/path/to/oh-my-cap/src/gcap</code> 下，
+用户应自行购买缺失的源码，并将其放到 <code>/path/to/oh-my-cap/src/gcap</code> 下，
 再在该目录下进行编译:</p>
 
 <pre><code>$ make
@@ -220,7 +224,16 @@ export PATH=$OH_MY_CAP/src/pssac:${PATH}
 export PATH=$OH_MY_CAP/src/gcap:${PATH}
 </code></pre>
 
-<p><strong>不同 Shell 的配置文件可能不同，请自行解决！</strong></p>
+<p><strong>通常系统的默认 shell 都是 Bash，如果有你自行更换默认 Shell 的情况（如Csh），那么设置的方式可能不同，请自行解决！</strong></p>
+
+<h2 id="安装-perl-的并行模块">安装 Perl 的并行模块</h2>
+
+<p>计算格林函数比较耗时，Oh My CAP 已经实现用并行计算格林函数：</p>
+
+<pre><code>cpanm Parallel::ForkManager
+</code></pre>
+
+<p>cpanm 是需要事先安装的，安装方法见<a href="http://seisman.info/perl-plenv.html">Perl 多版本共存之 plenv</a></p>
 </span>
     </div></article>
 
@@ -241,7 +254,7 @@ export PATH=$OH_MY_CAP/src/gcap:${PATH}
 	</header>
 	
 	<a class="widget-header-small button" href="http://oh-my-cap.wangliang.one/index.xml"><span class="fa fa-rss"></span> Subscribe to the Site</a>
-	<ul><li><a href="http://oh-my-cap.wangliang.one/post/new-website/">项目网站全面改版</a></li></ul>
+	<ul><li><a href="http://oh-my-cap.wangliang.one/post/release-1.1/">1.1 版发布</a></li><li><a href="http://oh-my-cap.wangliang.one/post/new-website/">项目网站全面改版</a></li></ul>
 </div>
   
 	

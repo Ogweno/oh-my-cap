@@ -14,7 +14,7 @@
     <link rel="prefetch" href="https://unpkg.com/lunr/lunr.js" />
     <link rel="prefetch" href="http://oh-my-cap.wangliang.one/js/search.min.js" />
     <link rel="prefetch" href="http://oh-my-cap.wangliang.one/index.json" />
-    <meta name="description" itemprop="description" content="Oh My CAP 中自带了一个示例事件，你可以按照如下步骤依次执行命令得到该事件的震源机制解，以验证所有程序都正确安装并对整个流程有初步的认识。 # 进入 Glib 目录，生成格林函数 $ cd Glib $ perl run_fk.pl model.fk # 进入 example 目录 $ cd ../example/ # 对示例数据进行预处理 $ perl process.pl 20080418093658 # 生成权重文件 $ perl weight.pl 20080418093658 # 反演并查看反演结果 $ perl inversion.pl 20080418093658 # 路径 20080418093658 下面的 model_*.pdf为各个深度的结果和波形拟合图 # 绘制并查看深度反演结果 $ perl get_depth.pl 20080418093658 $ gs 20080418093658/depth.ps  下图展示了震源深度固定为 15 km 时的震源机制反演结果（即 20080418093658/model_15.ps）： 下图展示了不同震源深度的反演结果（即 20080418093658/depth.ps）： " id="desc"><meta name="generator" content="Hugo 0.25.1" /><link rel="canonical" href="http://oh-my-cap.wangliang.one/quick-start/">
+    <meta name="description" itemprop="description" content="Oh My CAP 中自带了一个示例事件，你可以按照如下步骤依次执行命令得到该事件的震源机制解，以验证所有程序都正确安装并对整个流程有初步的认识。 # 进入 Glib 目录，生成格林函数 $ cd Glib $ perl run_fk.pl model.fk # 进入 example 目录 $ cd ../example/ # 对示例数据进行预处理 $ perl process.pl 20080418093658 # 警告 `WARNING potential for aliasing. new delta: 0.200000 data delta: 0.025000` 可忽略 # 生成权重文件 $ perl weight.pl 20080418093658 # 反演并查看反演结果 $ perl inversion.pl 20080418093658 # 路径 20080418093658 下面的 model_*.pdf为各个深度的结果和波形拟合图 # 绘制并查看深度反演结果 $ perl get_depth.pl 20080418093658 $ gs 20080418093658/depth.ps  下图展示了震源深度固定为 15 km 时的震源机制反演结果（即 20080418093658/model_15." id="desc"><meta name="generator" content="Hugo 0.25.1" /><link rel="canonical" href="http://oh-my-cap.wangliang.one/quick-start/">
 
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="prefetch stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
 
@@ -41,6 +41,9 @@
         &nbsp;&nbsp;<span class="nav-arrow">&#9656;</span>
       </label></a><ul>
     <li class="no-select" itemscope itemtype="http://schema.org/SiteNavigationElement">
+    <input type="checkbox" id="nav-1.1-%E7%89%88%E5%8F%91%E5%B8%83" class="hide"/>
+    <a class="main-nav button" tabindex="0" href="http://oh-my-cap.wangliang.one/post/release-1.1/" >
+      <span>1.1 版发布</span></a></li><li class="no-select" itemscope itemtype="http://schema.org/SiteNavigationElement">
     <input type="checkbox" id="nav-%E9%A1%B9%E7%9B%AE%E7%BD%91%E7%AB%99%E5%85%A8%E9%9D%A2%E6%94%B9%E7%89%88" class="hide"/>
     <a class="main-nav button" tabindex="0" href="http://oh-my-cap.wangliang.one/post/new-website/" >
       <span>项目网站全面改版</span></a></li>
@@ -100,6 +103,7 @@ $ cd ../example/
 
 # 对示例数据进行预处理
 $ perl process.pl 20080418093658
+# 警告 `WARNING potential for aliasing. new delta: 0.200000 data delta: 0.025000` 可忽略
 
 # 生成权重文件
 $ perl weight.pl 20080418093658
@@ -113,10 +117,10 @@ $ perl get_depth.pl 20080418093658
 $ gs 20080418093658/depth.ps
 </code></pre>
 
-<p>下图展示了震源深度固定为 15 km 时的震源机制反演结果（即 <code>20080418093658/model_15.ps</code>）：
+<p>下图展示了震源深度固定为 15 km 时的震源机制反演结果（即 <code>20080418093658/model_15.pdf</code>）：
 <img src="/images/model_15.png" alt="15 km的反演结果" /></p>
 
-<p>下图展示了不同震源深度的反演结果（即 <code>20080418093658/depth.ps</code>）：
+<p>下图展示了不同震源深度的反演结果（即 <code>20080418093658/depth.pdf</code>）：
 <img src="/images/model_depth.png" alt="深度反演结果" /></p>
 </span>
     </div></article>
@@ -138,7 +142,7 @@ $ gs 20080418093658/depth.ps
 	</header>
 	
 	<a class="widget-header-small button" href="http://oh-my-cap.wangliang.one/index.xml"><span class="fa fa-rss"></span> Subscribe to the Site</a>
-	<ul><li><a href="http://oh-my-cap.wangliang.one/post/new-website/">项目网站全面改版</a></li></ul>
+	<ul><li><a href="http://oh-my-cap.wangliang.one/post/release-1.1/">1.1 版发布</a></li><li><a href="http://oh-my-cap.wangliang.one/post/new-website/">项目网站全面改版</a></li></ul>
 </div>
   
 	
