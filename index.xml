@@ -5,8 +5,21 @@
     <link>http://oh-my-cap.wangliang.one/</link>
     <description>Recent content on Oh My CAP</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Tue, 05 Sep 2017 00:00:00 +0800</lastBuildDate>
+    <lastBuildDate>Sat, 23 Sep 2017 00:00:00 +0800</lastBuildDate>
     <atom:link href="http://oh-my-cap.wangliang.one/" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>如何修复 bug</title>
+      <link>http://oh-my-cap.wangliang.one/post/fix-bug/</link>
+      <pubDate>Sat, 23 Sep 2017 00:00:00 +0800</pubDate>
+      
+      <guid>http://oh-my-cap.wangliang.one/post/fix-bug/</guid>
+      <description>&lt;p&gt;Bug 是指编程时在代码里留下的错误。任何人写代码都会有 bug。本项目的 bug 有两个来源，一是朱老师的官方代码可能出现 bug，二是我在写脚本时，可能出现 bug。&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
     
     
     <item>
@@ -16,17 +29,6 @@
       
       <guid>http://oh-my-cap.wangliang.one/post/release-1.1/</guid>
       <description>1.1 版包含了这一年以来的改进。主要改进一是用配置文件设置参数，基本实现了不修改脚本做任意事件。二是并行计算格林函数，大幅提高运行速度。</description>
-    </item>
-    
-    
-    
-    <item>
-      <title>如何修复 bug</title>
-      <link>http://oh-my-cap.wangliang.one/post/fix-bug/</link>
-      <pubDate>Tue, 05 Sep 2017 00:00:00 +0800</pubDate>
-      
-      <guid>http://oh-my-cap.wangliang.one/post/fix-bug/</guid>
-      <description></description>
     </item>
     
     
