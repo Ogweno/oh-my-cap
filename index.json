@@ -34,6 +34,11 @@
   "body": "Oh My CAP 中自带了一个示例事件，你可以按照如下步骤依次执行命令得到该事件的震源机制解，以验证所有程序都正确安装并对整个流程有初步的认识。# 进入 Glib 目录，生成格林函数 $ cd Glib $ perl run_fk.pl model.fk # 进入 example 目录 $ cd ../example/ # 对示例数据进行预处理 $ perl process.pl 20080418093658 # 警告 `WARNING potential for aliasing. new delta: 0.200000 data delta: 0.025000` 可忽略 # 生成权重文件 $ perl weight.pl 20080418093658 # 反演并查看反演结果 $ perl inversion.pl 20080418093658 # 路径 20080418093658 下面的 model_*.pdf为各个深度的结果和波形拟合图 # 绘制并查看深度反演结果 $ perl get_depth.pl 20080418093658 $ gs 20080418093658/depth.ps  下图展示了震源深度固定为 15 km 时的震源机制反演结果（即 20080418093658/model_15.pdf）： 下图展示了不同震源深度的反演结果（即 20080418093658/depth.pdf）： ",
   "url": "http://oh-my-cap.wangliang.one/quick-start/"
 },{
+  "name": "Bug 列表",
+  "description": "滚动更新版不包含已知的 bug：下载滚动更新版已知 bug 列表 此处列出 1.1 版及以后版本的 bug。1.1版 a03cb77",
+  "body": " 滚动更新版不包含已知的 bug：下载滚动更新版已知 bug 列表 此处列出 1.1 版及以后版本的 bug。1.1版 a03cb77",
+  "url": "http://oh-my-cap.wangliang.one/bug-list/"
+},{
   "name": "代码差异",
   "description": "本项目对 fk、pssac 和 gCAP 的源码只进行了微量的修改。这里的详细修改历史是 GitHub 自动跟踪、自动呈现和自动更新的，所以不存在忘记记录的问题。fk fk 是 Prof. Lupei Zhu 写的一个计算水平分层介质中理论地震图的程序。官方版本： fk3.2.tar相对于官方版的改动： 删除了自带的示例 删除了无用的临时文件 修改 Makefile 使得其更通用 修改输出文件的命名规则以适应并行计算  详细修改历史见： https://github.com/wangliang1989/oh-my-cap/commits/master/src/fkpssac pssac 是 Prof. Lupei Zhu 根据 GMT 的 psxy 命令修改得到，用于绘制 SAC 格式的波形数据的程序。官方版本： pssac.tar pssac.c相对于官方版的改动： 修改 Makefile 使得其更通用  详细修改历史见： https://github.com/wangliang1989/oh-my-cap/commits/master/src/pssacgcap Prof. Zhu 的官方版本： gcap1.0.tar相对于官方版的改动： 删除了自带的示例及临时文件 修改 cap_plt.pl 和 depth.pl 使得其不依赖于 GMT 的系统设置 修改 cap.pl 使得用户不必再自行修改该文件 修改 Makefile 使得其更通用  详细修改历史见： https://github.",
   "body": " 本项目对 fk、pssac 和 gCAP 的源码只进行了微量的修改。这里的详细修改历史是 GitHub 自动跟踪、自动呈现和自动更新的，所以不存在忘记记录的问题。fk fk 是 Prof. Lupei Zhu 写的一个计算水平分层介质中理论地震图的程序。官方版本： fk3.2.tar相对于官方版的改动： 删除了自带的示例 删除了无用的临时文件 修改 Makefile 使得其更通用 修改输出文件的命名规则以适应并行计算  详细修改历史见： https://github.com/wangliang1989/oh-my-cap/commits/master/src/fkpssac pssac 是 Prof. Lupei Zhu 根据 GMT 的 psxy 命令修改得到，用于绘制 SAC 格式的波形数据的程序。官方版本： pssac.tar pssac.c相对于官方版的改动： 修改 Makefile 使得其更通用  详细修改历史见： https://github.com/wangliang1989/oh-my-cap/commits/master/src/pssacgcap Prof. Zhu 的官方版本： gcap1.0.tar相对于官方版的改动： 删除了自带的示例及临时文件 修改 cap_plt.pl 和 depth.pl 使得其不依赖于 GMT 的系统设置 修改 cap.pl 使得用户不必再自行修改该文件 修改 Makefile 使得其更通用  详细修改历史见： https://github.com/wangliang1989/oh-my-cap/commits/master/src/gcap",
@@ -43,6 +48,11 @@
   "description": "1.1 版包含了这一年以来的改进。主要改进一是用配置文件设置参数，基本实现了不修改脚本做任意事件。二是并行计算格林函数，大幅提高运行速度。",
   "body": "1.1 版包含了这一年以来的改进。主要改进一是用配置文件设置参数，基本实现了不修改脚本做任意事件。二是并行计算格林函数，大幅提高运行速度。",
   "url": "http://oh-my-cap.wangliang.one/post/release-1.1/"
+},{
+  "name": "如何修复 bug",
+  "description": "Bug 是指编程时在代码里留下的错误。任何人写代码都会有 bug。本项目的 bug 有两个来源，一是朱老师的官方代码可能出现 bug，二是我在写脚本时，可能出现 bug。 如果发现 bug，我会尽快修复，并在网站上的Bug 列表页面公布。但是，如果是朱老师的官方代码里的 bug，并且也不是明显错误，我不一定会去改代码。比如，在自动截取时窗的程序中，震源深度是写死为 5 公里的，本来是不对的，但是影响非常小。像这种，我就只会在网站上相关页面上提及，或者不提及。这样做是为了在正确性和保证本项目是朱露培的 CAP，而不是我的 CAP 这一原则之间的平衡。用户可以照我说明的 bug 情况，自己修改，也可以下载本项目的滚动更新版进行覆盖。滚动更新版不包含已知的 bug。下载滚动更新版",
+  "body": "Bug 是指编程时在代码里留下的错误。任何人写代码都会有 bug。本项目的 bug 有两个来源，一是朱老师的官方代码可能出现 bug，二是我在写脚本时，可能出现 bug。 如果发现 bug，我会尽快修复，并在网站上的Bug 列表页面公布。但是，如果是朱老师的官方代码里的 bug，并且也不是明显错误，我不一定会去改代码。比如，在自动截取时窗的程序中，震源深度是写死为 5 公里的，本来是不对的，但是影响非常小。像这种，我就只会在网站上相关页面上提及，或者不提及。这样做是为了在正确性和保证本项目是朱露培的 CAP，而不是我的 CAP 这一原则之间的平衡。用户可以照我说明的 bug 情况，自己修改，也可以下载本项目的滚动更新版进行覆盖。滚动更新版不包含已知的 bug。下载滚动更新版",
+  "url": "http://oh-my-cap.wangliang.one/post/fix-bug/"
 },{
   "name": "项目网站全面改版",
   "description": "我改版了项目网页，新用的模板有更清晰的代码高亮和博客功能。后者可以使网页更加灵活。今后在新的博客版块会发布项目相关的新闻和专门问题的讲解。",

@@ -31,11 +31,20 @@
   </url>
   
   <url>
+    <loc>http://oh-my-cap.wangliang.one/bug-list/</loc>
+  </url>
+  
+  <url>
     <loc>http://oh-my-cap.wangliang.one/code-diffs/</loc>
   </url>
   
   <url>
     <loc>http://oh-my-cap.wangliang.one/post/release-1.1/</loc>
+    <lastmod>2017-09-05T00:00:00+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://oh-my-cap.wangliang.one/post/fix-bug/</loc>
     <lastmod>2017-09-05T00:00:00+08:00</lastmod>
   </url>
   
