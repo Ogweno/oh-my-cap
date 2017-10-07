@@ -14,7 +14,7 @@
     <link rel="prefetch" href="https://unpkg.com/lunr/lunr.js" />
     <link rel="prefetch" href="http://oh-my-cap.wangliang.one/js/search.min.js" />
     <link rel="prefetch" href="http://oh-my-cap.wangliang.one/index.json" />
-    <meta name="description" itemprop="description" content="对于初学者。本安装文档的每一个字都需要阅读！因为版权原因，我无法提供全部安装包，有困难请加群 580712662。 以下安装步骤在 CentOS 上验证通过。在其他 Linux 发行版及 Mac 上安装步骤类似。 因为 gCAP 依赖的 SAC 几乎不可能在 Windows 上安装，所以本安装指南不适用于 Windows。 gCAP 依赖 SAC、GMT、fk 和 pssac。 安装编译工具 CentOS 用户 sudo yum install gcc gcc-c&#43;&#43; gcc-gfortran sudo yum install compat-gcc-44 compat-gcc-44-c&#43;&#43; compat-gcc-44-gfortran compat-libf2c-34 sudo yum install make  其他 Linux 发行版安装方法类似。请勿尝试安装 g77，gfortran 已经全面代替 g77 了。 MacOS 用户 MacOS 用户推荐使用 Homebrew 安装。 brew install gcc make  SAC Oh My CAP 依赖 SAC v101.6a。 SAC 是免费而非开源软件。根据授权协议，我不能直接向你提供，你需要自己向 IRIS 申请源码包或者二进制包。申请地址是 http://ds." id="desc"><meta name="generator" content="Hugo 0.25.1" /><link rel="canonical" href="http://oh-my-cap.wangliang.one/install/">
+    <meta name="description" itemprop="description" content="初学者需要阅读本安装文档的每一个字！ 因为版权原因，我无法在此提供全部安装包，有困难请加群 580712662。 gCAP 依赖 SAC、GMT、fk 和 pssac，没有这四个，程序用不上来。另外，绝大多数情况，原始地震数据是 seed 格式，所以往往需要 rdseed。 平台问题 gCAP 可以运行在 GNU/Linux 和 MacOS 上。因为 gCAP 依赖的 SAC 几乎不可能在 Windows 上安装，所以请勿尝试 Windows！ 98% 的可能性你会在 GNU/Linux 上用 gCAP。GNU/Linux 有众多的桌面发行版，这些桌面发行版主要可以分为两组即以红帽为基础的 REHL 系和以 Debian 为基础的 Debian 系。红帽、CentOS、Fedora 等属于 REHL 系，Debian、Ubuntu、Mint 属于 Debain 系。 以下安装步骤在 CentOS 和 Mint 上验证通过。在其他 Linux 发行版及 Mac 上安装步骤类似。 安装编译工具 请勿尝试安装 g77！gfortran 已经全面代替 g77 了。 REHL 系（红帽、CentOS、Fedora 等）用户请参照 CentOS 的安装方式。 Debain 系（Debian、Ubuntu、Mint 等）用户请参照 Mint 的安装方式。 CentOS sudo yum install gcc gcc-c&#43;&#43; gcc-gfortran sudo yum install compat-gcc-44 compat-gcc-44-c&#43;&#43; compat-gcc-44-gfortran compat-libf2c-34 sudo yum install make  Mint sudo apt-get install gcc gfortran  MacOS MacOS 用户推荐使用 Homebrew 安装。" id="desc"><meta name="generator" content="Hugo 0.29" /><link rel="canonical" href="http://oh-my-cap.wangliang.one/install/">
 
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="prefetch stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
 
@@ -101,11 +101,14 @@
 <ul>
 <li>
 <ul>
+<li><a href="#平台问题">平台问题</a></li>
 <li><a href="#安装编译工具">安装编译工具</a>
 <ul>
-<li><a href="#centos-用户">CentOS 用户</a></li>
-<li><a href="#macos-用户">MacOS 用户</a></li>
+<li><a href="#centos">CentOS</a></li>
+<li><a href="#mint">Mint</a></li>
+<li><a href="#macos">MacOS</a></li>
 </ul></li>
+<li><a href="#rdseed">rdseed</a></li>
 <li><a href="#sac">SAC</a></li>
 <li><a href="#gmt">GMT</a></li>
 <li><a href="#taup">TauP</a></li>
@@ -120,36 +123,51 @@
 </nav>
       <span itemprop="articleBody">
 
-<p>对于初学者。本安装文档的每一个字都需要阅读！因为版权原因，我无法提供全部安装包，有困难请加群 580712662。</p>
+<p>初学者需要阅读本安装文档的每一个字！</p>
 
-<p>以下安装步骤在 CentOS 上验证通过。在其他 Linux 发行版及 Mac 上安装步骤类似。
-因为 gCAP 依赖的 SAC 几乎不可能在 Windows 上安装，所以本安装指南不适用于 Windows。</p>
+<p>因为版权原因，我无法在此提供全部安装包，有困难请加群 580712662。
+gCAP 依赖 SAC、GMT、fk 和 pssac，没有这四个，程序用不上来。另外，绝大多数情况，原始地震数据是 seed 格式，所以往往需要 rdseed。</p>
 
-<p>gCAP 依赖 SAC、GMT、fk 和 pssac。</p>
+<h2 id="平台问题">平台问题</h2>
+
+<p>gCAP 可以运行在 GNU/Linux 和 MacOS 上。因为 gCAP 依赖的 SAC 几乎不可能在 Windows 上安装，所以请勿尝试 Windows！
+98% 的可能性你会在 GNU/Linux 上用 gCAP。GNU/Linux 有众多的桌面发行版，这些桌面发行版主要可以分为两组即以红帽为基础的 REHL 系和以 Debian 为基础的 Debian 系。红帽、CentOS、Fedora 等属于 REHL 系，Debian、Ubuntu、Mint 属于 Debain 系。
+以下安装步骤在 CentOS 和 Mint 上验证通过。在其他 Linux 发行版及 Mac 上安装步骤类似。</p>
 
 <h2 id="安装编译工具">安装编译工具</h2>
 
-<h3 id="centos-用户">CentOS 用户</h3>
+<p>请勿尝试安装 g77！gfortran 已经全面代替 g77 了。
+REHL 系（红帽、CentOS、Fedora 等）用户请参照 CentOS 的安装方式。
+Debain 系（Debian、Ubuntu、Mint 等）用户请参照 Mint 的安装方式。</p>
+
+<h3 id="centos">CentOS</h3>
 
 <pre><code>sudo yum install gcc gcc-c++ gcc-gfortran
 sudo yum install compat-gcc-44 compat-gcc-44-c++ compat-gcc-44-gfortran compat-libf2c-34
 sudo yum install make
 </code></pre>
 
-<p>其他 Linux 发行版安装方法类似。请勿尝试安装 g77，gfortran 已经全面代替 g77 了。</p>
+<h3 id="mint">Mint</h3>
 
-<h3 id="macos-用户">MacOS 用户</h3>
+<pre><code>sudo apt-get install gcc gfortran
+</code></pre>
+
+<h3 id="macos">MacOS</h3>
 
 <p>MacOS 用户推荐使用 <a href="http://brew.sh/index_zh-cn.html">Homebrew</a> 安装。</p>
 
 <pre><code>brew install gcc make
 </code></pre>
 
+<h2 id="rdseed">rdseed</h2>
+
+<p>rdseed 用于转换地震数据，是非常常用的软件。如果你不安装 rdseed，你也可以使用本项目，但无法运行成功本项目提供的例子。安装请参见 <a href="http://seisman.info/install-rdseed.html">rdseed 的安装</a>。虽然需要申请，IRIS 才提供 rdseed，但是只要提交申请，不经审核，即时提供下载。</p>
+
 <h2 id="sac">SAC</h2>
 
-<p>Oh My CAP 依赖 SAC <strong>v101.6a</strong>。</p>
+<p>建议使用 SAC 的 <strong>v101.6a</strong> 版。</p>
 
-<p>SAC 是免费而非开源软件。根据授权协议，我不能直接向你提供，你需要自己向 IRIS 申请源码包或者二进制包。申请地址是 <a href="http://ds.iris.edu/ds/nodes/dmc/forms/sac/">http://ds.iris.edu/ds/nodes/dmc/forms/sac/</a> 。你要注意，这个审核是人工审核，别和 IRIS 耍花招。</p>
+<p>SAC 是非开源软件，但对学术界用户开放源代码和免费使用。根据授权协议，我不能直接向你提供，你需要自己向 IRIS 证明你的学术身份来申请源码包或者二进制包。申请地址是 <a href="http://ds.iris.edu/ds/nodes/dmc/forms/sac/">http://ds.iris.edu/ds/nodes/dmc/forms/sac/</a> 。你要注意，这个审核是人工审核，和前面的 rdseed 可不一样，别和 IRIS 耍花招。</p>
 
 <p>SAC 的安装参考：</p>
 
@@ -158,6 +176,8 @@ sudo yum install make
 
 <li><p><a href="https://seisman.github.io/SAC_Docs_zh/introduction/mac-install.html">SAC 在 Mac 上的安装</a></p></li>
 </ul>
+
+<p>已知在 Ubuntu 上如果用二进制包安装，会导致之后的 fk 等编译失败，故强烈建议用源码编译的方式。</p>
 
 <h2 id="gmt">GMT</h2>
 
