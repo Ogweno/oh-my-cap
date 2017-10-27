@@ -35,8 +35,8 @@
   "url": "http://oh-my-cap.wangliang.one/quick-start/"
 },{
   "name": "Bug 列表",
-  "description": "滚动更新版不包含已知的 bug：下载滚动更新版已知 bug 列表 此处列出 1.1 版及以后版本的 bug。1.1版 a03cb77",
-  "body": " 滚动更新版不包含已知的 bug：下载滚动更新版已知 bug 列表 此处列出 1.1 版及以后版本的 bug。1.1版 a03cb77",
+  "description": "滚动更新版不包含已知的 bug：下载滚动更新版已知 bug 列表 此处列出 1.1 版及以后版本的 bug。1.1版 a03cb77 旋转分量后文件重命名的方式有误230aefc perl 5.2.6 以上版本无法找到 config 模块",
+  "body": " 滚动更新版不包含已知的 bug：下载滚动更新版已知 bug 列表 此处列出 1.1 版及以后版本的 bug。1.1版 a03cb77 旋转分量后文件重命名的方式有误230aefc perl 5.2.6 以上版本无法找到 config 模块",
   "url": "http://oh-my-cap.wangliang.one/bug-list/"
 },{
   "name": "代码差异",
