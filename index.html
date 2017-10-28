@@ -44,6 +44,9 @@
     <input type="checkbox" id="nav-1.1-%E7%89%88%E5%8F%91%E5%B8%83" class="hide"/>
     <a class="main-nav button" tabindex="0" href="http://oh-my-cap.wangliang.one/post/release-1.1/" >
       <span>1.1 版发布</span></a></li><li class="no-select" itemscope itemtype="http://schema.org/SiteNavigationElement">
+    <input type="checkbox" id="nav-1.1-%E7%89%88%E5%92%8C-1.0-%E7%89%88%E7%BB%93%E6%9E%9C%E4%B8%8D%E5%90%8C%E7%9A%84%E9%97%AE%E9%A2%98" class="hide"/>
+    <a class="main-nav button" tabindex="0" href="http://oh-my-cap.wangliang.one/post/diff-1.1/" >
+      <span>1.1 版和 1.0 版结果不同的问题</span></a></li><li class="no-select" itemscope itemtype="http://schema.org/SiteNavigationElement">
     <input type="checkbox" id="nav-%E5%A6%82%E4%BD%95%E4%BF%AE%E5%A4%8D-bug" class="hide"/>
     <a class="main-nav button" tabindex="0" href="http://oh-my-cap.wangliang.one/post/fix-bug/" >
       <span>如何修复 BUG</span></a></li><li class="no-select" itemscope itemtype="http://schema.org/SiteNavigationElement">
@@ -147,6 +150,23 @@
       
         <article itemprop="blogPosts" itemscope itemtype="http://schema.org/BlogPosting"><div>
     <header class="post-list-title">
+      <a href="http://oh-my-cap.wangliang.one/post/diff-1.1/">
+        <h2 itemprop="headline">1.1 版和 1.0 版结果不同的问题</h2>
+      </a><div class="metadata">
+        <span class="fa fa-clock-o"></span>
+        <time datetime="2017-09-05" itemprop="datePublished">September 05, 2017</time>
+      </div></header>
+    <div class="post-list-summary" itemprop="description">
+      <p>1.1 版发布后，有同学给我说，1.1 和 1.0 做例子的结果有微量差异（真的只是非常微量的差异）。不仅如此，1.1 做例子时，还出现了 psmeca 的警告psmeca: Warning: big isotropic component, case not fully tested!。Oh My CAP 非常在乎可靠性！这篇博客讨论这个问题。 一切从代码出发，要分析这个问题，以 1.1 版为基础修改代码，让结果和 1.0 一样。经过我的实际测试，只需要做这个网页上展示的修改，即可做出和 1.0 版完全一样的结果： https://github.com/wangliang1989/oh-my-cap/commit/1b63e43d61c90d3efd2e1eba1926752478ba966e 修改是两部分，一部分是对去仪器响应的频率的改变，一部分是新版本对波形数据新增了 cut 的操作。大家可以自行判断，这两处修改都没有任何错误，也没有很大的差异，但是会对互相关等等的结果造成一些差异，这些都是很正常的。 至于 psmeca 的报警，让我告诉你这是 psmeca 有问题。新版本得到的矩张量解中 DC 的组成比例超过 99%。</p>
+    </div>
+  </div>
+</article>
+
+      
+    
+      
+        <article itemprop="blogPosts" itemscope itemtype="http://schema.org/BlogPosting"><div>
+    <header class="post-list-title">
       <a href="http://oh-my-cap.wangliang.one/post/new-website/">
         <h2 itemprop="headline">项目网站全面改版</h2>
       </a><div class="metadata">
@@ -181,7 +201,7 @@
 	</header>
 	
 	<a class="widget-header-small button" href="http://oh-my-cap.wangliang.one/index.xml"><span class="fa fa-rss"></span> Subscribe to the Site</a>
-	<ul><li><a href="http://oh-my-cap.wangliang.one/post/fix-bug/">如何修复 bug</a></li><li><a href="http://oh-my-cap.wangliang.one/post/release-1.1/">1.1 版发布</a></li><li><a href="http://oh-my-cap.wangliang.one/post/new-website/">项目网站全面改版</a></li></ul>
+	<ul><li><a href="http://oh-my-cap.wangliang.one/post/fix-bug/">如何修复 bug</a></li><li><a href="http://oh-my-cap.wangliang.one/post/release-1.1/">1.1 版发布</a></li><li><a href="http://oh-my-cap.wangliang.one/post/diff-1.1/">1.1 版和 1.0 版结果不同的问题</a></li><li><a href="http://oh-my-cap.wangliang.one/post/new-website/">项目网站全面改版</a></li></ul>
 </div>
   
 	

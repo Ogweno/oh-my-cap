@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>项目网站全面改版</title>
+    <title>1.1 版和 1.0 版结果不同的问题</title>
 
     
     <link rel="dns-prefetch" href="https://maxcdn.bootstrapcdn.com/" />
@@ -14,7 +14,7 @@
     <link rel="prefetch" href="https://unpkg.com/lunr/lunr.js" />
     <link rel="prefetch" href="http://oh-my-cap.wangliang.one/js/search.min.js" />
     <link rel="prefetch" href="http://oh-my-cap.wangliang.one/index.json" />
-    <meta name="description" itemprop="description" content="我改版了项目网页，新用的模板有更清晰的代码高亮和博客功能。后者可以使网页更加灵活。今后在新的博客版块会发布项目相关的新闻和专门问题的讲解。" id="desc"><meta name="generator" content="Hugo 0.25.1" /><link rel="canonical" href="http://oh-my-cap.wangliang.one/post/new-website/">
+    <meta name="description" itemprop="description" content="1.1 版发布后，有同学给我说，1.1 和 1.0 做例子的结果有微量差异（真的只是非常微量的差异）。不仅如此，1.1 做例子时，还出现了 psmeca 的警告psmeca: Warning: big isotropic component, case not fully tested!。Oh My CAP 非常在乎可靠性！这篇博客讨论这个问题。 一切从代码出发，要分析这个问题，以 1.1 版为基础修改代码，让结果和 1.0 一样。经过我的实际测试，只需要做这个网页上展示的修改，即可做出和 1.0 版完全一样的结果： https://github.com/wangliang1989/oh-my-cap/commit/1b63e43d61c90d3efd2e1eba1926752478ba966e 修改是两部分，一部分是对去仪器响应的频率的改变，一部分是新版本对波形数据新增了 cut 的操作。大家可以自行判断，这两处修改都没有任何错误，也没有很大的差异，但是会对互相关等等的结果造成一些差异，这些都是很正常的。 至于 psmeca 的报警，让我告诉你这是 psmeca 有问题。新版本得到的矩张量解中 DC 的组成比例超过 99%。" id="desc"><meta name="generator" content="Hugo 0.25.1" /><link rel="canonical" href="http://oh-my-cap.wangliang.one/post/diff-1.1/">
 
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="prefetch stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
 
@@ -45,13 +45,13 @@
     <a class="main-nav button" tabindex="0" href="http://oh-my-cap.wangliang.one/post/release-1.1/" >
       <span>1.1 版发布</span></a></li><li class="no-select" itemscope itemtype="http://schema.org/SiteNavigationElement">
     <input type="checkbox" id="nav-1.1-%E7%89%88%E5%92%8C-1.0-%E7%89%88%E7%BB%93%E6%9E%9C%E4%B8%8D%E5%90%8C%E7%9A%84%E9%97%AE%E9%A2%98" class="hide"/>
-    <a class="main-nav button" tabindex="0" href="http://oh-my-cap.wangliang.one/post/diff-1.1/" >
+    <a class="main-nav button active" tabindex="0" href="http://oh-my-cap.wangliang.one/post/diff-1.1/" >
       <span>1.1 版和 1.0 版结果不同的问题</span></a></li><li class="no-select" itemscope itemtype="http://schema.org/SiteNavigationElement">
     <input type="checkbox" id="nav-%E5%A6%82%E4%BD%95%E4%BF%AE%E5%A4%8D-bug" class="hide"/>
     <a class="main-nav button" tabindex="0" href="http://oh-my-cap.wangliang.one/post/fix-bug/" >
       <span>如何修复 BUG</span></a></li><li class="no-select" itemscope itemtype="http://schema.org/SiteNavigationElement">
     <input type="checkbox" id="nav-%E9%A1%B9%E7%9B%AE%E7%BD%91%E7%AB%99%E5%85%A8%E9%9D%A2%E6%94%B9%E7%89%88" class="hide"/>
-    <a class="main-nav button active" tabindex="0" href="http://oh-my-cap.wangliang.one/post/new-website/" >
+    <a class="main-nav button" tabindex="0" href="http://oh-my-cap.wangliang.one/post/new-website/" >
       <span>项目网站全面改版</span></a></li>
     </ul></li><li class="no-select" itemscope itemtype="http://schema.org/SiteNavigationElement">
     <input type="checkbox" id="nav-%E6%96%B0%E6%89%8B%E5%85%A5%E9%97%A8" class="hide"/>
@@ -97,16 +97,24 @@
 <main class="row-item small-full medium-two-thirds" itemscope itemtype="http://schema.org/Blog">
   <article id="post-article" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting" itemref="desc">
     <header id="page-header">
-      <h1 itemprop="headline">项目网站全面改版</h1><p id="post-metadata" class="row"><span class="row-item">
+      <h1 itemprop="headline">1.1 版和 1.0 版结果不同的问题</h1><p id="post-metadata" class="row"><span class="row-item">
           <span class="fa fa-clock-o"></span>
-          <time datetime="2017-09-01" content="2017-09-01" itemprop="datePublished">Published: September 01, 2017</time></span><span class="row-item">
+          <time datetime="2017-09-05" content="2017-09-05" itemprop="datePublished">Published: September 05, 2017</time></span><span class="row-item">
           <span class="fa fa-clock-o"></span>
-          <time datetime="2017-09-01" content="2017-09-01" itemprop="dateModified">Last Updated: September 01, 2017</time></span><span class="row-item">Estimated reading time: ~<span itemprop="timeRequired">1 minutes</span></span></p>
+          <time datetime="2017-09-05" content="2017-09-05" itemprop="dateModified">Last Updated: September 05, 2017</time></span><span class="row-item">Estimated reading time: ~<span itemprop="timeRequired">1 minutes</span></span></p>
       
     </header>
     
     <div id="post-content">
-      <span itemprop="articleBody"><p>我改版了项目网页，新用的模板有更清晰的代码高亮和博客功能。后者可以使网页更加灵活。今后在新的博客版块会发布项目相关的新闻和专门问题的讲解。</p>
+      <span itemprop="articleBody"><p>1.1 版发布后，有同学给我说，1.1 和 1.0 做例子的结果有微量差异（真的只是非常微量的差异）。不仅如此，1.1 做例子时，还出现了 psmeca 的警告psmeca: Warning:  big isotropic component, case not fully tested!。Oh My CAP 非常在乎可靠性！这篇博客讨论这个问题。</p>
+
+<p>一切从代码出发，要分析这个问题，以 1.1 版为基础修改代码，让结果和 1.0 一样。经过我的实际测试，只需要做这个网页上展示的修改，即可做出和 1.0 版完全一样的结果：</p>
+
+<p><a href="https://github.com/wangliang1989/oh-my-cap/commit/1b63e43d61c90d3efd2e1eba1926752478ba966e">https://github.com/wangliang1989/oh-my-cap/commit/1b63e43d61c90d3efd2e1eba1926752478ba966e</a></p>
+
+<p>修改是两部分，一部分是对去仪器响应的频率的改变，一部分是新版本对波形数据新增了 cut 的操作。大家可以自行判断，这两处修改都没有任何错误，也没有很大的差异，但是会对互相关等等的结果造成一些差异，这些都是很正常的。</p>
+
+<p>至于 psmeca 的报警，让我告诉你这是 psmeca 有问题。新版本得到的矩张量解中 DC 的组成比例超过 99%。</p>
 </span>
     </div><div id="authorbox" class="row vcenter memberbox" itemprop="author" itemscope itemtype="http://schema.org/Person">
     		<div class="row-item member-avatar" itemprop="image" itemscope itemtype="http://schema.org/ImageObject">
