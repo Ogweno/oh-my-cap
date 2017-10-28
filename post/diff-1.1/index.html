@@ -14,7 +14,7 @@
     <link rel="prefetch" href="https://unpkg.com/lunr/lunr.js" />
     <link rel="prefetch" href="http://oh-my-cap.wangliang.one/js/search.min.js" />
     <link rel="prefetch" href="http://oh-my-cap.wangliang.one/index.json" />
-    <meta name="description" itemprop="description" content="1.1 版发布后，有同学给我说，1.1 和 1.0 做例子的结果有微量差异（真的只是非常微量的差异）。不仅如此，1.1 做例子时，还出现了 psmeca 的警告psmeca: Warning: big isotropic component, case not fully tested!。Oh My CAP 非常在乎可靠性！这篇博客讨论这个问题。 一切从代码出发，要分析这个问题，以 1.1 版为基础修改代码，让结果和 1.0 一样。经过我的实际测试，只需要做这个网页上展示的修改，即可做出和 1.0 版完全一样的结果： https://github.com/wangliang1989/oh-my-cap/commit/1b63e43d61c90d3efd2e1eba1926752478ba966e 修改是两部分，一部分是对去仪器响应的频率的改变，一部分是新版本对波形数据新增了 cut 的操作。大家可以自行判断，这两处修改都没有任何错误，也没有很大的差异，但是会对互相关等等的结果造成一些差异，这些都是很正常的。 至于 psmeca 的报警，让我告诉你这是 psmeca 有问题。新版本得到的矩张量解中 DC 的组成比例超过 99%。" id="desc"><meta name="generator" content="Hugo 0.25.1" /><link rel="canonical" href="http://oh-my-cap.wangliang.one/post/diff-1.1/">
+    <meta name="description" itemprop="description" content="&lt;p&gt;1.1 版发布后，有同学给我说，1.1 和 1.0 做例子的结果有微量差异（真的只是非常微量的差异）。不仅如此，1.1 做例子时，还出现了 psmeca 的警告psmeca: Warning:  big isotropic component, case not fully tested!。Oh My CAP 非常在乎可靠性！这篇博客讨论这个问题。  一切从代码出发，要分析这个问题，以 1.1 版为基础修改代码，让结果和 1.0 一样。经过我的实际测试，只需要做这个网页上展示的修改，即可做出和 1.0 版完全一样的结果：&lt;/p&gt;" id="desc"><meta name="generator" content="Hugo 0.25.1" /><link rel="canonical" href="http://oh-my-cap.wangliang.one/post/diff-1.1/">
 
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="prefetch stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
 
@@ -99,23 +99,22 @@
     <header id="page-header">
       <h1 itemprop="headline">1.1 版和 1.0 版结果不同的问题</h1><p id="post-metadata" class="row"><span class="row-item">
           <span class="fa fa-clock-o"></span>
-          <time datetime="2017-09-05" content="2017-09-05" itemprop="datePublished">Published: September 05, 2017</time></span><span class="row-item">
+          <time datetime="2017-10-28" content="2017-10-28" itemprop="datePublished">Published: October 28, 2017</time></span><span class="row-item">
           <span class="fa fa-clock-o"></span>
-          <time datetime="2017-09-05" content="2017-09-05" itemprop="dateModified">Last Updated: September 05, 2017</time></span><span class="row-item">Estimated reading time: ~<span itemprop="timeRequired">1 minutes</span></span></p>
+          <time datetime="2017-10-28" content="2017-10-28" itemprop="dateModified">Last Updated: October 28, 2017</time></span><span class="row-item">Estimated reading time: ~<span itemprop="timeRequired">1 minutes</span></span></p>
       
     </header>
     
     <div id="post-content">
-      <span itemprop="articleBody"><p>1.1 版发布后，有同学给我说，1.1 和 1.0 做例子的结果有微量差异（真的只是非常微量的差异）。不仅如此，1.1 做例子时，还出现了 psmeca 的警告psmeca: Warning:  big isotropic component, case not fully tested!。Oh My CAP 非常在乎可靠性！这篇博客讨论这个问题。</p>
+      <span itemprop="articleBody"><p>1.1 版发布后，有同学给我说，1.1 和 1.0 做例子的结果有微量差异（真的只是非常微量的差异）。不仅如此，1.1 做例子时，还出现了 psmeca 的警告psmeca: Warning:  big isotropic component, case not fully tested!。Oh My CAP 非常在乎可靠性！这篇博客讨论这个问题。
 
-<p>一切从代码出发，要分析这个问题，以 1.1 版为基础修改代码，让结果和 1.0 一样。经过我的实际测试，只需要做这个网页上展示的修改，即可做出和 1.0 版完全一样的结果：</p>
+一切从代码出发，要分析这个问题，以 1.1 版为基础修改代码，让结果和 1.0 一样。经过我的实际测试，只需要做这个网页上展示的修改，即可做出和 1.0 版完全一样的结果：</p>
 
 <p><a href="https://github.com/wangliang1989/oh-my-cap/commit/1b63e43d61c90d3efd2e1eba1926752478ba966e">https://github.com/wangliang1989/oh-my-cap/commit/1b63e43d61c90d3efd2e1eba1926752478ba966e</a></p>
 
 <p>修改是两部分，一部分是对去仪器响应的频率的改变，一部分是新版本对波形数据新增了 cut 的操作。大家可以自行判断，这两处修改都没有任何错误，也没有很大的差异，但是会对互相关等等的结果造成一些差异，这些都是很正常的。</p>
 
-<p>至于 psmeca 的报警，让我告诉你这是 psmeca 有问题。新版本得到的矩张量解中 DC 的组成比例超过 99%。</p>
-</span>
+<p>至于 psmeca 的报警，让我告诉你这是 psmeca 有问题。新版本得到的矩张量解中 DC 的组成比例超过 99%。</p></span>
     </div><div id="authorbox" class="row vcenter memberbox" itemprop="author" itemscope itemtype="http://schema.org/Person">
     		<div class="row-item member-avatar" itemprop="image" itemscope itemtype="http://schema.org/ImageObject">
     				<img alt="王亮 avatar" src="http://oh-my-cap.wangliang.one/images/profile.jpg" itemprop="contentUrl" />
@@ -147,7 +146,7 @@ I&#39;m a PhD student from CDUT.
 	</header>
 	
 	<a class="widget-header-small button" href="http://oh-my-cap.wangliang.one/index.xml"><span class="fa fa-rss"></span> Subscribe to the Site</a>
-	<ul><li><a href="http://oh-my-cap.wangliang.one/post/fix-bug/">如何修复 bug</a></li><li><a href="http://oh-my-cap.wangliang.one/post/release-1.1/">1.1 版发布</a></li><li><a href="http://oh-my-cap.wangliang.one/post/diff-1.1/">1.1 版和 1.0 版结果不同的问题</a></li><li><a href="http://oh-my-cap.wangliang.one/post/new-website/">项目网站全面改版</a></li></ul>
+	<ul><li><a href="http://oh-my-cap.wangliang.one/post/diff-1.1/">1.1 版和 1.0 版结果不同的问题</a></li><li><a href="http://oh-my-cap.wangliang.one/post/fix-bug/">如何修复 bug</a></li><li><a href="http://oh-my-cap.wangliang.one/post/release-1.1/">1.1 版发布</a></li><li><a href="http://oh-my-cap.wangliang.one/post/new-website/">项目网站全面改版</a></li></ul>
 </div>
   
 	
