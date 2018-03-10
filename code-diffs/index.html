@@ -12,21 +12,21 @@
     <link rel="preconnect" href="https://unpkg.com/" />
     
     <link rel="prefetch" href="https://unpkg.com/lunr/lunr.js" />
-    <link rel="prefetch" href="http://oh-my-cap.wangliang.one/js/search.min.js" />
-    <link rel="prefetch" href="http://oh-my-cap.wangliang.one/index.json" />
-    <meta name="description" itemprop="description" content="本项目对 fk、pssac 和 gCAP 的源码只进行了微量的修改。这里的详细修改历史是 GitHub 自动跟踪、自动呈现和自动更新的，所以不存在忘记记录的问题。 fk fk 是 Prof. Lupei Zhu 写的一个计算水平分层介质中理论地震图的程序。 官方版本： fk3.2.tar 相对于官方版的改动：  删除了自带的示例 删除了无用的临时文件 修改 Makefile 使得其更通用 修改输出文件的命名规则以适应并行计算  详细修改历史见： https://github.com/wangliang1989/oh-my-cap/commits/master/src/fk pssac pssac 是 Prof. Lupei Zhu 根据 GMT 的 psxy 命令修改得到，用于绘制 SAC 格式的波形数据的程序。 官方版本： pssac.tar pssac.c 相对于官方版的改动：  修改 Makefile 使得其更通用  详细修改历史见： https://github.com/wangliang1989/oh-my-cap/commits/master/src/pssac gcap Prof. Zhu 的官方版本： gcap1.0.tar 相对于官方版的改动：  删除了自带的示例及临时文件 修改 cap_plt.pl 和 depth.pl 使得其不依赖于 GMT 的系统设置 修改 cap.pl 使得用户不必再自行修改该文件 修改 Makefile 使得其更通用  详细修改历史见： https://github." id="desc"><meta name="generator" content="Hugo 0.32.3" /><link rel="canonical" href="http://oh-my-cap.wangliang.one/code-diffs/">
+    <link rel="prefetch" href="http://oh-my-cap.seismology.xyz/js/search.min.js" />
+    <link rel="prefetch" href="http://oh-my-cap.seismology.xyz/index.json" />
+    <meta name="description" itemprop="description" content="本项目对 fk、pssac 和 gCAP 的源码只进行了微量的修改。这里的详细修改历史是 GitHub 自动跟踪、自动呈现和自动更新的，所以不存在忘记记录的问题。 fk fk 是 Prof. Lupei Zhu 写的一个计算水平分层介质中理论地震图的程序。 官方版本： fk3.2.tar 相对于官方版的改动：  删除了自带的示例 删除了无用的临时文件 修改 Makefile 使得其更通用 修改输出文件的命名规则以适应并行计算  详细修改历史见： https://github.com/wangliang1989/oh-my-cap/commits/master/src/fk pssac pssac 是 Prof. Lupei Zhu 根据 GMT 的 psxy 命令修改得到，用于绘制 SAC 格式的波形数据的程序。 官方版本： pssac.tar pssac.c 相对于官方版的改动：  修改 Makefile 使得其更通用  详细修改历史见： https://github.com/wangliang1989/oh-my-cap/commits/master/src/pssac gcap Prof. Zhu 的官方版本： gcap1.0.tar 相对于官方版的改动：  删除了自带的示例及临时文件 修改 cap_plt.pl 和 depth.pl 使得其不依赖于 GMT 的系统设置 修改 cap.pl 使得用户不必再自行修改该文件 修改 Makefile 使得其更通用  详细修改历史见： https://github." id="desc"><meta name="generator" content="Hugo 0.32.3" /><link rel="canonical" href="http://oh-my-cap.seismology.xyz/code-diffs/">
 
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="prefetch stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
 
     
-    <link rel="prefetch stylesheet" type="text/css" href="http://oh-my-cap.wangliang.one/styles.css">
+    <link rel="prefetch stylesheet" type="text/css" href="http://oh-my-cap.seismology.xyz/styles.css">
 
     <script>var _paq = undefined;</script></head>
   <body itemscope itemtype="http://schema.org/WebPage">
     <div id="site-container">
       <div id="site-header">
         <header class="small-text-center medium-text-left">
-          <a href="http://oh-my-cap.wangliang.one">
+          <a href="http://oh-my-cap.seismology.xyz">
             <span id="site-title" itemprop="name">Oh My CAP</span>
             <br/><span id="site-tagline">世间最庄严的问题是：我能做什么好事？</span>
           </a>
@@ -36,60 +36,60 @@
         <nav id="main-nav">
           <ul class="menu"><li class="no-select" itemscope itemtype="http://schema.org/SiteNavigationElement">
     <input type="checkbox" id="nav-%E5%8D%9A%E5%AE%A2" class="hide"/>
-    <a class="main-nav button" tabindex="0" href="http://oh-my-cap.wangliang.one/post/" >
+    <a class="main-nav button" tabindex="0" href="http://oh-my-cap.seismology.xyz/post/" >
       <span>博客</span><label for="nav-%E5%8D%9A%E5%AE%A2">
         &nbsp;&nbsp;<span class="nav-arrow">&#9656;</span>
       </label></a><ul>
     <li class="no-select" itemscope itemtype="http://schema.org/SiteNavigationElement">
     <input type="checkbox" id="nav-1.1-%E7%89%88%E5%8F%91%E5%B8%83" class="hide"/>
-    <a class="main-nav button" tabindex="0" href="http://oh-my-cap.wangliang.one/post/release-1.1/" >
+    <a class="main-nav button" tabindex="0" href="http://oh-my-cap.seismology.xyz/post/release-1.1/" >
       <span>1.1 版发布</span></a></li><li class="no-select" itemscope itemtype="http://schema.org/SiteNavigationElement">
     <input type="checkbox" id="nav-1.1-%E7%89%88%E5%92%8C-1.0-%E7%89%88%E7%BB%93%E6%9E%9C%E4%B8%8D%E5%90%8C%E7%9A%84%E9%97%AE%E9%A2%98" class="hide"/>
-    <a class="main-nav button" tabindex="0" href="http://oh-my-cap.wangliang.one/post/diff-1.1/" >
+    <a class="main-nav button" tabindex="0" href="http://oh-my-cap.seismology.xyz/post/diff-1.1/" >
       <span>1.1 版和 1.0 版结果不同的问题</span></a></li><li class="no-select" itemscope itemtype="http://schema.org/SiteNavigationElement">
     <input type="checkbox" id="nav-fk-%E5%B1%95%E5%B9%B3%E5%8F%98%E6%8D%A2%E7%9A%84%E8%AF%B4%E6%98%8E" class="hide"/>
-    <a class="main-nav button" tabindex="0" href="http://oh-my-cap.wangliang.one/post/fk-flat/" >
+    <a class="main-nav button" tabindex="0" href="http://oh-my-cap.seismology.xyz/post/fk-flat/" >
       <span>FK 展平变换的说明</span></a></li><li class="no-select" itemscope itemtype="http://schema.org/SiteNavigationElement">
     <input type="checkbox" id="nav-%E5%A6%82%E4%BD%95%E4%BF%AE%E5%A4%8D-bug" class="hide"/>
-    <a class="main-nav button" tabindex="0" href="http://oh-my-cap.wangliang.one/post/fix-bug/" >
+    <a class="main-nav button" tabindex="0" href="http://oh-my-cap.seismology.xyz/post/fix-bug/" >
       <span>如何修复 BUG</span></a></li><li class="no-select" itemscope itemtype="http://schema.org/SiteNavigationElement">
     <input type="checkbox" id="nav-%E9%A1%B9%E7%9B%AE%E7%BD%91%E7%AB%99%E5%85%A8%E9%9D%A2%E6%94%B9%E7%89%88" class="hide"/>
-    <a class="main-nav button" tabindex="0" href="http://oh-my-cap.wangliang.one/post/new-website/" >
+    <a class="main-nav button" tabindex="0" href="http://oh-my-cap.seismology.xyz/post/new-website/" >
       <span>项目网站全面改版</span></a></li>
     </ul></li><li class="no-select" itemscope itemtype="http://schema.org/SiteNavigationElement">
     <input type="checkbox" id="nav-%E6%96%B0%E6%89%8B%E5%85%A5%E9%97%A8" class="hide"/>
-    <a class="main-nav button" tabindex="0" href="http://oh-my-cap.wangliang.one/about/" >
+    <a class="main-nav button" tabindex="0" href="http://oh-my-cap.seismology.xyz/about/" >
       <span>新手入门</span></a></li><li class="no-select" itemscope itemtype="http://schema.org/SiteNavigationElement">
     <input type="checkbox" id="nav-%E5%AE%89%E8%A3%85" class="hide"/>
-    <a class="main-nav button" tabindex="0" href="http://oh-my-cap.wangliang.one/install/" >
+    <a class="main-nav button" tabindex="0" href="http://oh-my-cap.seismology.xyz/install/" >
       <span>安装</span></a></li><li class="no-select" itemscope itemtype="http://schema.org/SiteNavigationElement">
     <input type="checkbox" id="nav-%E5%BF%AB%E9%80%9F%E5%BC%80%E5%A7%8B" class="hide"/>
-    <a class="main-nav button" tabindex="0" href="http://oh-my-cap.wangliang.one/quick-start/" >
+    <a class="main-nav button" tabindex="0" href="http://oh-my-cap.seismology.xyz/quick-start/" >
       <span>快速开始</span></a></li><li class="no-select" itemscope itemtype="http://schema.org/SiteNavigationElement">
     <input type="checkbox" id="nav-%E6%B5%81%E7%A8%8B" class="hide"/>
-    <a class="main-nav button" tabindex="0" href="http://oh-my-cap.wangliang.one/procedures/" >
+    <a class="main-nav button" tabindex="0" href="http://oh-my-cap.seismology.xyz/procedures/" >
       <span>流程</span><label for="nav-%E6%B5%81%E7%A8%8B">
         &nbsp;&nbsp;<span class="nav-arrow">&#9656;</span>
       </label></a><ul>
     <li class="no-select" itemscope itemtype="http://schema.org/SiteNavigationElement">
     <input type="checkbox" id="nav-%E6%B5%81%E7%A8%8B%E4%BB%8B%E7%BB%8D" class="hide"/>
-    <a class="main-nav button" tabindex="0" href="http://oh-my-cap.wangliang.one/procedures/intro-to-procedures/" >
+    <a class="main-nav button" tabindex="0" href="http://oh-my-cap.seismology.xyz/procedures/intro-to-procedures/" >
       <span>流程介绍</span></a></li><li class="no-select" itemscope itemtype="http://schema.org/SiteNavigationElement">
     <input type="checkbox" id="nav-%E8%AE%A1%E7%AE%97%E6%A0%BC%E6%9E%97%E5%87%BD%E6%95%B0" class="hide"/>
-    <a class="main-nav button" tabindex="0" href="http://oh-my-cap.wangliang.one/procedures/gflib/" >
+    <a class="main-nav button" tabindex="0" href="http://oh-my-cap.seismology.xyz/procedures/gflib/" >
       <span>计算格林函数</span></a></li><li class="no-select" itemscope itemtype="http://schema.org/SiteNavigationElement">
     <input type="checkbox" id="nav-%E6%95%B0%E6%8D%AE%E9%A2%84%E5%A4%84%E7%90%86" class="hide"/>
-    <a class="main-nav button" tabindex="0" href="http://oh-my-cap.wangliang.one/procedures/preprocess/" >
+    <a class="main-nav button" tabindex="0" href="http://oh-my-cap.seismology.xyz/procedures/preprocess/" >
       <span>数据预处理</span></a></li><li class="no-select" itemscope itemtype="http://schema.org/SiteNavigationElement">
     <input type="checkbox" id="nav-%E5%8F%8D%E6%BC%94" class="hide"/>
-    <a class="main-nav button" tabindex="0" href="http://oh-my-cap.wangliang.one/procedures/inversion/" >
+    <a class="main-nav button" tabindex="0" href="http://oh-my-cap.seismology.xyz/procedures/inversion/" >
       <span>反演</span></a></li>
     </ul></li><li class="no-select" itemscope itemtype="http://schema.org/SiteNavigationElement">
     <input type="checkbox" id="nav-bug-%E5%88%97%E8%A1%A8" class="hide"/>
-    <a class="main-nav button" tabindex="0" href="http://oh-my-cap.wangliang.one/bug-list/" >
+    <a class="main-nav button" tabindex="0" href="http://oh-my-cap.seismology.xyz/bug-list/" >
       <span>BUG 列表</span></a></li><li class="no-select" itemscope itemtype="http://schema.org/SiteNavigationElement">
     <input type="checkbox" id="nav-%E4%BB%A3%E7%A0%81%E5%B7%AE%E5%BC%82" class="hide"/>
-    <a class="main-nav button active" tabindex="0" href="http://oh-my-cap.wangliang.one/code-diffs/" >
+    <a class="main-nav button active" tabindex="0" href="http://oh-my-cap.seismology.xyz/code-diffs/" >
       <span>代码差异</span></a></li></ul>
         </nav>
       </div>
@@ -178,11 +178,11 @@
 </div>
 	<div class="widget">
 	<header>
-		<span class="widget-header"><span class="fa fa-pencil"></span> <a href="http://oh-my-cap.wangliang.one/post/">Recent Posts</a></span>
+		<span class="widget-header"><span class="fa fa-pencil"></span> <a href="http://oh-my-cap.seismology.xyz/post/">Recent Posts</a></span>
 	</header>
 	
-	<a class="widget-header-small button" href="http://oh-my-cap.wangliang.one/index.xml"><span class="fa fa-rss"></span> Subscribe to the Site</a>
-	<ul><li><a href="http://oh-my-cap.wangliang.one/post/fk-flat/">FK 展平变换的说明</a></li><li><a href="http://oh-my-cap.wangliang.one/post/diff-1.1/">1.1 版和 1.0 版结果不同的问题</a></li><li><a href="http://oh-my-cap.wangliang.one/post/fix-bug/">如何修复 bug</a></li><li><a href="http://oh-my-cap.wangliang.one/post/release-1.1/">1.1 版发布</a></li><li><a href="http://oh-my-cap.wangliang.one/post/new-website/">项目网站全面改版</a></li></ul>
+	<a class="widget-header-small button" href="http://oh-my-cap.seismology.xyz/index.xml"><span class="fa fa-rss"></span> Subscribe to the Site</a>
+	<ul><li><a href="http://oh-my-cap.seismology.xyz/post/fk-flat/">FK 展平变换的说明</a></li><li><a href="http://oh-my-cap.seismology.xyz/post/diff-1.1/">1.1 版和 1.0 版结果不同的问题</a></li><li><a href="http://oh-my-cap.seismology.xyz/post/fix-bug/">如何修复 bug</a></li><li><a href="http://oh-my-cap.seismology.xyz/post/release-1.1/">1.1 版发布</a></li><li><a href="http://oh-my-cap.seismology.xyz/post/new-website/">项目网站全面改版</a></li></ul>
 </div>
   
 	
@@ -227,11 +227,11 @@
         </div>
       </footer>
     </div><script src="https://unpkg.com/lunr/lunr.js"></script>
-    <script src="http://oh-my-cap.wangliang.one/js/search.js" type="text/javascript"></script>
+    <script src="http://oh-my-cap.seismology.xyz/js/search.js" type="text/javascript"></script>
     
     <script>
       var lunrIndex = undefined;
-      loadIndex("http:\/\/oh-my-cap.wangliang.one\/index.json").then(
+      loadIndex("http:\/\/oh-my-cap.seismology.xyz\/index.json").then(
         function(index) { lunrIndex = index; },
         function(status){}
       );
